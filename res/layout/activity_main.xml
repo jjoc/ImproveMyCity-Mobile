@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/llmain">
+
+
+    <RelativeLayout
+        android:id="@+id/rlmain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        
+        <com.mk4droid.IMC_Core.MapView_TapZoom
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:apiKey="@string/google_map_api_key"
+            android:clickable="true" />
+     
+          <Button
+         android:id="@+id/btMapChange"
+         android:layout_width="wrap_content"
+         android:layout_height="30dp"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="60dp"
+         android:layout_alignLeft="@+id/mapview"
+         android:background="@drawable/shape_convex_top"
+         android:tag ="Normal"
+         android:text="@string/NormalMap" 
+         android:onClick="onClick"/>
+     
+         <Button
+         android:id="@+id/btRefresh"
+         android:layout_width="wrap_content"
+         android:layout_height="30dp"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="10dp"
+         android:layout_marginRight="70dp"
+         android:padding="5dp"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/shape_convex_top"
+         android:text="@string/Refresh" 
+         android:onClick="onClick"/>
+         
+		<Button
+         android:id="@+id/btARView"
+         android:layout_width="wrap_content"
+         android:layout_height="30dp"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="20dp"
+         android:layout_marginLeft="75dp"
+         android:padding="5dp"
+         android:background="@drawable/shape_convex_top"
+         android:visibility="gone"
+         android:text="AR View" 
+         android:onClick="onClick"/>
+       
+    </RelativeLayout>
+</LinearLayout>

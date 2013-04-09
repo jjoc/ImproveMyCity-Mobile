@@ -1,0 +1,311 @@
+/** Service_Location */
+package com.mk4droid.IMC_Services;
+
+import java.util.Iterator;
+
+import com.google.android.maps.GeoPoint;
+import com.mk4droid.IMC_Activities.Activity_TabHost;
+import com.mk4droid.IMC_Utils.GEO;
+
+import android.app.ProgressDialog;
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.location.Criteria;
+import android.location.GpsSatellite;
+import android.location.GpsStatus;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Binder;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.util.Log;
+import android.widget.Toast;
+
+/**
+ *  Find current location and broadcast if location has changed
+ * 
+ * @author Dimitrios Ververidis, Dr.
+ *         Post-doctoral Researcher, 
+ *         Information Technologies Institute, ITI-CERTH,
+ *         Thermi, Thessaloniki, Greece      
+ *         ververid@iti.gr,  
+ *         http://mklab.iti.gr
+ *
+ */
+public class Service_Location extends Service {
+
+
+    /** User location */
+	public static Location locUser    = new Location("point User");
+
+	
+	//public static ProgressDialog dialogLocationCh; // When location has changed then download new data (INACTIVE)
+	Handler handlerBroadcastLocationCh;
+	
+	int tlv  = Toast.LENGTH_LONG;
+	
+	//----------- Location Manager for GPS and WIFI -------------
+	LocationManager lm;
+	LocationListener locationListenerGPS,locationListenerNetwork;
+	GpsStatus.Listener mGpsStatusListener = null;
+	
+	static String CurrAddressSTR = "";
+	String CurrSatsFound  = "";
+	
+	private final IBinder binder=new LocalBinder();
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		// Won't run unless it's EXPLICITLY STARTED
+		//Log.d("SVTEST", "Loc service ONSTARTCOMMAND");
+		
+		
+		return 1; //super.onStartCommand(intent, flags, startId);
+	}
+	
+ 
+	
+	@Override
+	public IBinder onBind(Intent arg0) {
+		
+		return binder;
+	}
+	
+	@Override
+	public boolean onUnbind(Intent intent) {
+	 
+	    return false;
+	}
+	
+	
+	public class LocalBinder extends Binder {
+		public Service_Location getService() {
+			return Service_Location.this;
+		}
+	}
+	
+ 
+	//============= onCreate ===================
+	/**
+	 *   Set GPS, Wifi, and GPSStatus listeners
+	 */
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		
+		
+		
+		//-------------- LOCATION GPS and WIFI ------------------------
+        lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                
+        // Get Last known location
+        Criteria crit = new Criteria();
+        crit.setAccuracy(Criteria.ACCURACY_COARSE);
+        String provider = lm.getBestProvider(crit, true);
+        
+        if (provider==null){
+        	Toast.makeText(Activity_TabHost.ctx, "No GPS, No Wi-Fi location. Please activate them!", tlv).show();
+        	
+        	//startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); // Bring GPS settings
+        } else{
+        	Location loc = lm.getLastKnownLocation(provider);
+        	
+        	//Log.e("LOC", " " + loc.getLatitude() + " "       + loc.getLongitude());
+        	
+        	if (loc!=null){
+            	locUser.setLongitude(loc.getLongitude()); 
+        		locUser.setLatitude(loc.getLatitude()); 
+        		locUser.setAltitude(loc.getAltitude());
+        		
+//        		Log.e("LOC_A", " " + locUser.getLatitude() + " " 
+//        	            + locUser.getLongitude());
+        		
+        	} else {
+        		Toast.makeText(Activity_TabHost.ctx, "I can not find your position!", tlv).show();
+        	}
+        }
+           
+     	//---------------    Location Listener WIFI ------------ 
+    	locationListenerNetwork = new LocationListener() {
+    		public void onLocationChanged(Location location) {
+    			
+    			
+//    			Log.e("LOC_B", " " + location.getLatitude() + " " 
+//        	            + location.getLongitude());
+
+    			
+    			
+    			if (location.getAccuracy()<50){
+    				
+    				    				
+    			    DecideDataUpdateDueLoc(locUser.distanceTo(location), location);
+    			}
+    		}
+    		public void onProviderDisabled(String provider) {}
+    		public void onProviderEnabled(String provider) {}
+    		public void onStatusChanged(String provider, int status, Bundle extras) {}
+    	};
+
+        
+        //---------------- Location Listener GPS ---------------- 
+    	locationListenerGPS = new LocationListener() {
+    		@Override
+    		public void onLocationChanged(Location location) {
+//    			
+//    			Log.e("LOC_C", " " + location.getLatitude() + " " 
+//        	            + location.getLongitude());
+    			
+    			if (location.getAccuracy()<50)
+    				DecideDataUpdateDueLoc(locUser.distanceTo(location), location);
+    		}
+    		
+    		@Override
+    		public void onProviderDisabled(String provider) {}
+    		@Override
+    		public void onProviderEnabled(String provider) {}
+    		@Override
+    		public void onStatusChanged(String provider, int status, Bundle extras) {}
+    	};
+
+    	//----------- Register GPS and WIFI location listeners ---------
+    	lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 10f, locationListenerNetwork);
+    	lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10f, locationListenerGPS);
+		
+		mGpsStatusListener = new GpsStatusListener();
+		lm.addGpsStatusListener(mGpsStatusListener);
+		
+		//-------- Broadcast new Issue was send through a handler ---------
+        handlerBroadcastLocationCh = new Handler()
+        {
+           public void handleMessage(Message msg)
+           {
+              if (msg.arg1 == 1) // Refresh Button
+            	  sendBroadcast(new Intent("android.intent.action.MAIN").putExtra("LocChanged",   "LocChanged"));  
+              
+              super.handleMessage(msg);
+           }
+        };
+		
+	}
+	
+	
+	
+    //=========== onDestroy ===================
+	/** Remove all location listeners */
+    public void onDestroy() {
+    	super.onDestroy();
+      	lm.removeUpdates(locationListenerNetwork);       // Remove Wifi location listener
+		lm.removeUpdates(locationListenerGPS);           // Remove GPS location listener
+	    lm.removeGpsStatusListener(mGpsStatusListener);  // Remove GPS status listener
+		stopSelf();
+    };
+	
+	// ==========    GpsStatusListener ==============================
+    /**
+     *    Find status of GPS signal received: Satellites ok. 
+     */
+	public class GpsStatusListener implements GpsStatus.Listener {
+		
+		@Override
+		public void onGpsStatusChanged(int event) {
+			StringBuilder sbSats = new StringBuilder(512);
+			String prnsSTR;
+			int prn;
+			//int NSatsOk = 0; 
+		
+			sbSats.delete(0, sbSats.length());
+
+			if (event == GpsStatus.GPS_EVENT_SATELLITE_STATUS) {
+				CurrSatsFound = "";
+
+				GpsStatus status = lm.getGpsStatus(null);
+				Iterable<GpsSatellite> sats = status.getSatellites();
+
+				@SuppressWarnings("rawtypes")
+				Iterator it = sats.iterator() ;
+				while ( it.hasNext() ){
+					GpsSatellite objSat = (GpsSatellite) it.next() ;
+
+					prn =objSat.getPrn();
+					prnsSTR =  Integer.toString(prn);
+
+					if (objSat.usedInFix() && prn>0){
+						sbSats.append(prnsSTR + "▲,");
+						//NSatsOk += 1;
+					}else
+						sbSats.append(prnsSTR+"▼,");
+				}
+
+				CurrSatsFound  = sbSats.toString();
+				
+				Intent i = new Intent("android.intent.action.MAIN").putExtra("CurrSatsFound", CurrSatsFound);
+	            sendBroadcast(i);
+				
+				
+			} // GPS_EVENT_SATELLITE_STATUS
+		} // On Status Changed
+	}
+
+    //=========== DecideDataUpdateDueLoc ===================
+	/**
+	 *  Broadcast current address and trigger to update data due to significant location change.
+	 * 
+	 * @param distanceDiff threshold of distance. If distance differs at least this value then data should be updated.
+	 * @param NewLocation The new location fix  
+	 */
+	public void DecideDataUpdateDueLoc(float distanceDiff, Location NewLocation){
+
+		
+		//--------- Broadcast User address has changed --------------
+		if (Service_Data.HasInternet){
+			GeoPoint pt = new GeoPoint((int) (locUser.getLatitude()*1E6), (int) (locUser.getLongitude()*1E6));
+	
+	       CurrAddressSTR = GEO.ConvertGeoPointToAddress(pt,getApplicationContext()) ;
+           sendBroadcast(new Intent("android.intent.action.MAIN").putExtra("CurrAddressSTR", CurrAddressSTR));
+		}
+		
+		
+//		String diffSTR = new Float(distanceDiff).toString();
+//		Log.e("distanceDiff",  diffSTR);
+//		Toast.makeText(Activity_TabHost.ctx,  diffSTR,  Toast.LENGTH_LONG).show();
+		
+		//----------- Update data if diff > 200 -----------
+		
+//		if (distanceDiff > 500 && false){
+//
+//			//---- Show dialog Refresh ----------
+//			dialogLocationCh = ProgressDialog.show(Activity_Main.ctx, 
+//					Activity_Main.resources.getString(R.string.Downloading),
+//					Activity_Main.resources.getString(R.string.LocationCh), true);
+//
+//			// ------- Broadcast Refresh through a handle
+//			Message msg = new Message();
+//			msg.arg1 = 1;
+//			handlerBroadcastLocationCh.sendMessage(msg);
+//		}
+		
+		//--- Update userLocation				
+	  	locUser.setLongitude(NewLocation.getLongitude());
+		locUser.setLatitude(NewLocation.getLatitude());
+		locUser.setAltitude(NewLocation.getAltitude());
+	}
+}
+
+
+
+//========== More Info ============
+//			StringBuilder sbLocation = new StringBuilder(512);
+//			sbLocation.append("Fx:"+noOfFixes);
+//			sbLocation.append("|Lg:"+ String.format("%.04f", (float) location.getLongitude()));
+//			sbLocation.append("|Lt:"+ String.format("%.04f", (float) location.getLatitude()));
+//			sbLocation.append("|Alt:"+ (int) location.getAltitude());
+//			sbLocation.append("|Acc:"+ (int) location.getAccuracy());
+//			sbLocation.append("|Spd:"+ (int) location.getSpeed());
+//
+//			SimpleDateFormat outputFormat = new SimpleDateFormat("HH:mm:ss");
+//			outputFormat.setTimeZone(TimeZone.getTimeZone("GMT+3")); 
+//			String dateSTR = outputFormat.format(location.getTime());

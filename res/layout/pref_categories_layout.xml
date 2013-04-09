@@ -1,0 +1,9 @@
+<!-- Layout used for PreferenceCategory in a PreferenceActivity. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?android:attr/listSeparatorTextViewStyle"
+    android:id="@+android:id/title"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="Test my day"
+    android:background="@drawable/gradient_blue"
+    android:textColor="#fff"
+/>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    >
+    
+    <TextView
+                android:id="@+id/tvInfoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient"
+                android:gravity="center"
+                android:text= "@string/About"
+                android:textColor="@color/wh"
+                android:textAppearance ="?android:attr/textAppearanceMedium" 
+                android:textStyle      ="bold" />
+
+    
+     <!--   What is it -->
+     <TextView
+        android:id="@+id/tvWhatIsItTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/WhatIsItTitle"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+     <TextView 
+             android:id="@+id/tvWhatIsIt"
+             android:text="@string/WhatIsIt"   
+             android:background="@drawable/button_shape_round"
+             android:layout_marginLeft ="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="1dp"
+             android:layout_marginBottom="10dp"
+             android:padding="10dp"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textStyle="normal"
+             android:gravity="center"
+             android:textColor="#000"
+             android:linksClickable="true"
+             android:autoLink="web"
+             android:textColorLink="#00f"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+     
+
+     <!--  Features and tests -->
+     <TextView
+        android:id="@+id/tvFeaturesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/FeaturesTestsTitle"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+     
+     
+     <TextView 
+             android:id="@+id/tvFeatures"
+             android:text="@string/FeaturesTests"  
+             android:background="@drawable/button_shape_round"
+             android:layout_marginLeft ="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="1dp"
+             android:layout_marginBottom="10dp"
+             android:padding="10dp"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:gravity="left"
+             android:textStyle="normal"
+             android:textColor="#000"
+             android:linksClickable="true"
+             android:autoLink="web"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+
+     
+     
+     
+     <!--  5 ContactInfo -->
+
+     <Button
+         android:id="@+id/btSendMail"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/SendMail" 
+         android:onClick="onClick"/>
+     
+     <TextView
+        android:id="@+id/tvContactTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/ContactInfoTitle"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+     
+     <TextView 
+             android:id="@+id/tvContactInfo"
+             android:text="@string/ContactInfo"
+             android:background="@drawable/button_shape_round"
+             android:layout_marginLeft ="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="1dp"
+             android:layout_marginBottom="10dp"
+             android:padding="10dp"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textStyle="bold"
+             android:gravity="center"
+             android:textColor="#000"
+             android:linksClickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+     
+     
+</LinearLayout>
+
+</ScrollView>

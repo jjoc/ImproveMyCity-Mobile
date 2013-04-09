@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:id = "@+id/llnewissue"
+            android:background="#fff">
+
+    <TextView
+            android:id="@+id/tvUnauth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/GoSetup"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#111" /> 
+    
+    <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_blue">
+    
+    <TextView
+            android:id="@+id/tvNewIssueTitle"
+            android:text="@string/ReportNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/wh"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+    </TableRow>
+
+    <!-- 
+    <TextView
+        android:id="@+id/tvCateg_new_iss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Category"
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:layout_marginLeft="15dp"/>
+ -->
+    <Spinner
+        android:id="@+id/spinnerCateg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="15dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginRight="15dp"/>
+    
+
+    <EditText
+            android:id="@+id/etTitle_ni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="30dp"
+            android:hint="@string/STitle"
+            android:singleLine="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" 
+            />
+        
+            
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:hint="@string/Description"
+        android:inputType="text"
+        android:lines="3"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+  
+    <Button
+            android:id="@+id/btAttach_image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_rect"
+            android:drawableLeft="@android:drawable/ic_menu_gallery"
+            android:onClick="onClick"
+            android:text="@string/Image"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+
+    <Button
+            android:id="@+id/btProceed_ni_B"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/gradient_green"
+            android:drawableLeft="@drawable/tick"
+            android:layout_marginLeft="5dp"            
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="2dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:text="@string/Proceed"
+            android:layout_weight = "1"
+            android:onClick="onClick"
+            android:textColor="#fff" />
+
+    </TableRow>
+
+    
+    
+        
+</LinearLayout>
+
+<!-- Debug:  0gA9r1gEfvHuCMNViHInCvatHMU8_Xn45ae1sTQ -->
+<!-- Signed pack: 0gA9r1gEfvHtMHQ3aEZJZKgZFsoNR63qYV4klkw -->
+<!-- mk4droid Signed pack: 0Zg6ViobDLQCeKTrC-WsWfZRylZq5CXSYtgotQw -->

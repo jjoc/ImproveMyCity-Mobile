@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">Βελτιώνω την πόλη μου - Δήμος Θέρμης</string>
+    <string name="CERTH">CERTH, iti.gr</string>
+    <string name="google_map_api_key" translatable="false">000000000000000000000000</string>
+    
+    
+    <!--          Splash Register  -->
+    <string name="welcometo">Δήμος Θέρμης - Smart City Services</string>
+    <string name="Login">Login</string>
+    <string name="skipLogin">Enter as a Guest</string>
+    <string name="Registration">Registration</string>
+    <string name="newaccount">New account</string>
+    <string name="loginInstr">Login or Sign Up with your Username and Password</string>
+    <string name="tryagain">Wrong username or password. Try again.</string>
+    <string name="Yourfullname">Your full name</string>
+    <string name="Createanaccount">Create an account. Only your full name can be written with Greek letters.</string>
+    <string name="Giveausername">Give a username!</string>
+    <string name="Givealsoyourname">Give also your name!</string>
+    <string name="NotValidEmail">Not valid e-mail</string>
+    <string name="PasswordShorter">Password should be less than 16 characters</string>
+    
+    <string name="Sending">I am sending your data. Please wait.</string>
+    
+    <string name="Notification">Notification</string>
+    <string name="Finish">Finish</string>
+    <string name="email">e-mail</string>
+    
+    
+    <!--         SERVICES         -->
+    <string name="Downloading">Downloading</string>
+    <string name="Downloaded">Downloaded</string>
+    <string name="NewIssues">New issues</string>
+    <string name="NewLocation">Issues around new location</string>
+    <string name="NewDistance">Issues within new range</string>
+    <string name="NewFilters">Issues filtered</string>
+    
+    <!-- Main -->
+    <string name="ReportAnIssue">Report an issue</string>
+    <string name="NormalMap">Normal</string>
+    <string name="Satellite">Satellite</string>
+    <string name="OnProgress">On Progress</string>
+    <string name="RefreshOK">Refresh OK</string>
+    <string name="OpenIssue">Open</string>
+    <string name="AckIssue">Acknowledged</string>
+    <string name="ClosedIssue">Closed</string>
+    <string name="Votes">Votes</string>
+    <string name="Reported">Reported successfully</string>
+    <string name="days">days</string>
+    <string name="hours">hours</string>
+    <string name="minutes">minutes</string>
+    <string name="ago">ago</string>
+    <string name="Main">Main</string>
+    <string name="Report">New issue</string>
+    <string name="Filters">Filters</string>
+    <string name="Setup">Setup</string>
+    <string name="List">List</string>
+    
+    <!--  3D --> 
+    <string name="View3D">View 3D</string>
+    
+    <!-- Filters  -->
+    <string name="State">State</string>
+    <string name="SelAll">Select/Unselect all</string>
+    <string name="Reverse">Reverse all</string>
+    <string name="Issues">Issues</string>
+    <string name="MyIssues">MyIssues</string>
+	
+       <!-- Report new Issue -->
+	<string name="GoSetup">Only registered users can report a new issue. Please register using the Setup tab.</string>
+    <string name="ReportNew">Reporting new issue</string>
+	<string name="back">back</string>
+	<string name="STitle">Short Title</string>
+	<string name="Category">Category</string>
+	<string name="Address">Address</string>
+	<string name="Shoot">Shoot</string>
+	<string name="Attach">Attach Image</string>
+	<string name="Description">Description</string>
+	<string name="Proceed">Proceed</string>
+	<string name="ReportIss">Report issue</string>
+	<string name="IssueReported">Issue reported</string>
+	<string name="SetManually">S\n e\n t\n \n m\n a\n n\n u\n a\n l\n l\n y</string>
+	<string name="DragMarker">Drag me</string>
+	<string name="LongerTitle">Longer title is needed</string>
+	<string name="PleaseAddress">Please write address manually</string>
+	
+	<string name="Image">Image</string>
+	<string name="Attachanimage">Attach an image</string>
+	<string name="Gallery">Gallery</string>
+	<string name="Camera">Camera</string>
+	<string name="Clear">Clear</string>
+	<string name="Issueoutofmunicipalitylimits">Issue out of municipality limits</string>
+	
+	
+	
+	<!--     View Issue -->
+	<string name="Reportedby">Reported by</string>
+	<string name="Viewed">Viewed</string>
+	<string name="Status">Status</string>
+	<string name="AddComment">Comment</string>
+	<string name="VotesFix">Votes to fix the issue</string>
+	<string name="VoteToFix">Vote to fix</string>
+	<string name="CommentCreat">Comment created</string>
+	<string name="AgoBy">ago by</string>
+	<string name="AlreadyVoted">You have already voted</string>
+	<string name="OnlyRegistered">Only registered users can comment.</string>
+	<string name="PressLogin">Press to login.</string>
+	<string name="Map">Map</string>
+		
+    
+    <!-- Setup -->
+    <string name="CustAccount">User account</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="LatinChars">Latin characters</string>
+    <string name="GreekChars">Greek letters allowed</string>
+    <string name="AccountOperations">Account operations</string>
+    <string name="LoginRegisterRemindLogout">Login/Register/Remind/Logout</string>
+    
+    <string-array name="AccountItems">
+        <item>Login</item>
+        <item>Register</item>
+        <item>Remind</item>
+        <item>Logout</item>
+    </string-array>
+    
+    
+    <string name="Language">Language</string>
+    <string name="LangSel">Language selection.</string>
+    <string name="IdonothaveA">I do not have an account</string>
+    <string name="Iforgot">I forgot my password</string>
+    <string name="Location">Location</string>
+    <string name="ViewRange">Viewing range</string>
+    <string name="ViewRadius">from current position.</string>
+    <string name="IssuesNo">Number of issues</string>
+    <string name="IssuesMaxNo">Max number of recent issues to download.</string>
+    <string name="RemindTitle">Send a reminder to:</string>
+    <string name="RemindHint">Write your e-mail here</string>
+    <string name="RemindButtonText">Send the password to e-mail</string>
+    <string name="System">System</string>
+    <string name="Refrinter">Refresh rate interval</string>
+    <string name="Restartneed">Restart is needed</string>
+    <string name="Contact">Contact</string>
+    <string name="Information">Information</string>
+    <string name="Version">Software version</string>
+    <string name="Helpinformationandcredits">Help information and credits</string>    
+    
+    <string name="Yourproposal">Your proposal</string>
+    <string name="Sendemailwithyourideas">Send an email with your ideas</string>
+    
+    <string name="Reset">Reset and restart</string>
+    <string name="Deleteallissuedatastoredlocallytoyourphone">Delete all issue data stored locally to your phone</string>
+    
+    <string name="Areyousure">Are you sure</string>
+    <string name="Deleted">Deleted</string>
+    
+    
+    <!--  About  -->    
+    <string name="WhatIsItTitle">Description of the Application</string>
+    <string name="FeaturesTestsTitle">Features and tests</string>
+    <string name="ContactInfoTitle">Authors</string>
+
+    <string name="WhatIsIt">ImproveMyCity is an application that allows citizens to submit all types of issues related to their neighbourhood (e.g. broken lamps, absence of trashbins, street potholes, broken benches, extra street light etc.). Next, the issues are transfered to the respective service of the municipality in order to be fixed. The web-based version of the application was developed from the research team of the Aristotle University of Thessaloniki under the European project PEOPLE smart cities (http://www.people-project.eu/portal/) and it is used from the municipality of Thermi (smartcity.thermi.gov.gr/improve/).</string>
+    
+    <string name="FeaturesTests">The application allows for:\n\n
+   - submitting issues together with an image.\n
+   - voting an already reported issue, as well as commenting it.\n
+   - viewing all issues on a map.\n
+   - filtering of issues such as category based or user-distance based filtering.\n\n
+
+Technical requirements:\n
+- Android version 2.2 (API 8 Froyo) or later;.\n
+- 1 MB of RAM to install and 10 ΜΒ of RAM to run;\n
+- 1GHz Processor;\n
+- Internet access;\n
+- GPS and camera (optional) \n\n
+
+Report your opinion:\n
+- by e-mail at improvemycitymobile@gmail.com\n
+    </string>
+
+    <string name="ContactInfo">Thank you for your co-operation.\n\n
+        CERTH - Centre for Research and Technology Hellas,\n 6ο km. Charilaou-Thermi, Greece\n
+Dimitrios Ververidis,\n Ioannis Tsampoulatidis,\n Spiros Nikolopoulos,\n Ioannis Kompatsiaris (ikom@iti.gr).</string>
+    
+        
+    
+     <string name="LogOut">Log out</string>
+     <string name="LoggedOut">Logged out</string>
+     <string name="SendMail">Send e-mail</string>
+     <string name="About">About</string>
+     
+    <string name="Usage">Application usage data</string>
+	<string name="Analytics">Share analytics</string>
+	<string name="HelpUs">Help us improve the app by sharing your usage data</string>
+	
+     
+    
+    <!-- Register -->
+    <string name="Register">Register</string>
+    <string name="FirstSecondName">First and Second name*</string>
+    <string name="ValidEmail">Valid e-mail address</string>
+    <string name="MoreThan6Chars">More than 6 characters</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Submit">Submit</string>
+    
+    <string name="Relationship">Relationship*</string>
+    
+    <string-array name="RelOptions">
+        <item>Resident</item>
+        <item>Working here</item>
+        <item>Visitor</item>
+    </string-array>
+    
+    
+ 
+		
+
+	<!-- Messages -->
+	<string name="Welcome">Welcome</string>
+	<string name="NoInternet">No Internet</string>
+	<string name="NoGPS">Please activate GPS.</string>
+	<string name="IncorUser">Username or password are incorrect. Registered?</string>
+	<string name="WaitServer">Waiting for server to reply &#8230;</string>
+    <string name="NoServer">Server did not reply!</string>
+    <string name="NoCamera">Camera not available!</string>
+    <string name="YesGPS">GPS Enabled.</string>
+    <string name="ReqFix">Request location fix.</string>       
+    <string name="Pause">Pause</string>
+    <string name="GoMaps">Map directions to go there</string>
+    <string name="YesInternet">Internet accessible.</string>
+
+    
+    <string name="SyncData">Synchronizing Data</string>
+    <string name="Refresh">Refresh</string>
+    <string name="DistanceView">Issues inside new range</string>
+    <string name="IssuesNoCh">Latest issues list</string>
+    <string name="FiltersCh">Filtered issues</string>
+    <string name="NewIssueCh">Refreshing data to get the new issue</string>
+    <string name="LocationCh">Issues around your new location</string>
+    
+    
+    
+    
+    
+    <!-- Arrays -->
+    <string-array name="Language">
+        <item>el - Ελληνικά</item>
+        <item>en - English</item>
+    </string-array>
+    
+    <string-array name="refrateoptions">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>60</item>
+        <item>off</item>
+    </string-array>
+    
+    <string-array name="refrateoptions_entries">
+        <item>1 minute</item>
+        <item>5 minutes (recommended)</item>
+        <item>10 minutes</item>
+        <item>1 hour</item>
+        <item>off</item>
+    </string-array>
+    
+
+
+    <string-array name="maxno_issues">
+        <item>20</item>
+        <item>40</item>
+        <item>80</item>
+        <item>200</item>
+        <item>400</item>
+    </string-array>
+    
+    <string-array name="maxno_issues_entries">
+        <item>20 issues</item>
+        <item>40 issues (recommended)</item>
+        <item>80 issues</item>
+        <item>100 issues</item>
+        <item>400 issues</item>
+    </string-array>
+</resources>

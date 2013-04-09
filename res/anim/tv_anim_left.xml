@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- This is where the view moves onto the screen -->
+<translate
+android:fromXDelta="-200%"
+android:toXDelta="0%"
+android:fromYDelta="0%"
+android:toYDelta="0%"
+android:duration="1000"
+android:zAdjustment="top" ></translate>
+
+<!-- this is where I am scaling the text it currently aligns on the left side of the textview 
+
+<scale
+android:fromXScale="1.0"
+android:fromYScale="1.0"
+android:toXScale="1.0"
+android:startOffset="500"
+android:toYScale="1.0"
+android:duration="1000"></scale>
+<scale
+android:fromXScale="1.0"
+android:fromYScale="1.0"
+android:toXScale="1.0"
+android:startOffset="1500"
+android:toYScale="1.0"
+android:duration="200"></scale>
+<scale
+android:fromXScale="1.0"
+android:fromYScale="1.0"
+android:toXScale="1.0"
+android:toYScale="1.0"
+android:startOffset="1700"
+android:duration="50"></scale>
+ -->
+ </set>

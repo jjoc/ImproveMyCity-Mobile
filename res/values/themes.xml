@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Backg">#FFFFFF</color>
+    <color name="wh">#FFFFFFFF</color>
+    
+    <color name="cl">#FF1F95AF</color>
+    <color name="ack">#FFF2B21C</color>
+    <color name="op">#FF216f0c</color>
+    
+    
+    <style name="dialog_register" parent="@android:style/Theme.Dialog">
+    	<item name="android:windowTitleStyle">@style/dialog_title_style</item>
+  	</style>
+
+	<style name="dialog_title_style" parent="android:Widget.TextView">
+    	<item name="android:background">#790102</item>
+    	<item name="android:textSize">10pt</item>
+    	<item name="android:padding">10dp</item>
+	</style>
+    
+    
+    <style name="mpwcStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="buttonStyle" parent="@android:style/MediaButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">9pt</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
+    <style name="minusbuttonStyle" parent="@android:style/MediaButton">
+        <item name="android:text">-</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="plusbuttonStyle" parent="@android:style/MediaButton">
+        <item name="android:text">+</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+
+    <style name="TableStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">#000000</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="TextStyleContents">
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">9pt</item>
+        <item name="android:layout_marginLeft">-8pt</item>
+        <item name="android:layout_marginRight">3pt</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
+    <style name="TextStyle">
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">12pt</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
+    <style name="TextStyleOptions">
+        <item name="android:textColor">#fff</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">8pt</item>
+    </style>
+ 
+    <style name="TextStyleSmall">
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">6pt</item>
+    </style>
+    
+    <style name="IconStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">6pt</item>
+    </style>
+    
+    
+</resources>
+
+
+<!-- Use In main: ->      style="@style/MyStyle"     -->

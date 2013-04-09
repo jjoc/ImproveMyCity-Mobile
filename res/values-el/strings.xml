@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Βελτιώνω την πόλη μου - Δήμος Θέρμης</string>
+    <string name="CERTH">EKETA, iti.gr</string>
+    
+    <!--          Splash Register  -->
+    <string name="welcometo">Δήμος Θέρμης, Υπηρεσίες Έξυπνης Πόλης</string>
+    <string name="Login">Είσοδος</string>
+    <string name="skipLogin">Είσοδος ως επισκέπτης</string>
+    <string name="Registration">Εγγραφή</string>
+    <string name="newaccount">Νέος λογαριασμός</string>
+    <string name="loginInstr">Είσοδος με Όνομα χρήστη και Κωδικό</string>
+    <string name="tryagain">Λανθασμένο όνομα χρήστη ή κωδικός. Ξαναπροσπαθείστε.</string>
+    <string name="Yourfullname">Ονοματεπώνυμο</string>
+    <string name="Createanaccount">Δημιούργησε έναν λογαριασμό. Μόνο το ονοματεπώνυμο μπορεί να έχει Ελληνικούς χαρακτήρες.</string>
+    <string name="Giveausername">Παρακαλώ εισάγετε ένα όνομα χρήστη.</string>
+    <string name="Givealsoyourname">Παρακαλώ εισάγετε ονοματεπώνυμο.</string>
+    <string name="NotValidEmail">Άκυρο e-mail</string>
+    <string name="Notification">Ειδοποίηση</string>
+    <string name="PasswordShorter">Ανώτατο όριο κωδικού 16 χαρακτήρες</string>
+    <string name="Finish">Τέλος</string>
+    <string name="email">e-mail</string>
+    <string name="Sending">Αποστολή δεδομένων. Παρακαλώ περιμένετε.</string>
+    
+    <!--         SERVICES         -->
+    <string name="Downloading">Λήψη</string>
+    <string name="Downloaded">Λήψη</string>
+    <string name="NewIssues">Νέων αιτημάτων</string>
+    <string name="NewLocation">Αιτημάτων γύρω από τη νέα τοποθεσία</string>
+    <string name="NewDistance">Αιτημάτων στο νεο βεληνεκές</string>
+    <string name="NewFilters">Φιλτραρισμένων αιτημάτων</string>
+    
+    <!-- Main -->
+    <string name="ReportAnIssue">Υποβολή αιτήματος</string>
+    <string name="NormalMap">Χάρτης</string>
+    <string name="Satellite">Δορυφόρος</string>
+    <string name="OnProgress">Φόρτωση δεδομένων</string>
+    <string name="RefreshOK">Ανανέωση επιτυχής</string>
+    <string name="OpenIssue">Υποβλήθηκε</string>
+    <string name="AckIssue">Σε εξέλιξη</string>
+    <string name="ClosedIssue">Διεκπεραιώθηκε</string>
+    <string name="Votes">Ψήφοι</string>
+    <string name="Reported">Αναφέρθηκε επιτυχώς</string>
+    <string name="days">ημέρες</string>
+    <string name="hours">ώρες</string>
+    <string name="minutes">λεπτά</string>
+    <string name="ago">πριν</string>
+    <string name="Main">Κεντρική</string>
+    <string name="Report">Νέο Θέμα</string>
+    <string name="Filters">Φίλτρα</string>
+    <string name="Setup">Ρυθμίσεις</string>
+    <string name="List">Λίστα</string>
+    
+    <!--  3D --> 
+    <string name="View3D">View 3D</string>
+    
+    <!-- Filters -->
+    <string name="State">Κατάσταση</string>
+    <string name="SelAll">Επιλογή/Αφαίρεση όλων</string>
+    <string name="Reverse">Αντιστροφή όλων</string>
+    <string name="Issues">Αιτήματα</string>
+    <string name="MyIssues">Τα αιτήματα μου</string>
+    
+    <!-- Report new Issue -->
+    <string name="GoSetup">Μόνο οι εγγεγραμμένοι χρήστες μπορούν να υποβάλλουν αιτήματα. Παρακαλώ συνδεθείτε χρησιμοποιώντας το μενού ρυθμίσεις.</string>
+    <string name="ReportNew">Υποβολή νέου αιτήματος</string>
+	<string name="back">πίσω</string>
+	<string name="STitle">Σύντομος τίτλος</string>
+	<string name="Category">Κατηγορία</string>
+	<string name="Address">Διεύθυνση</string>
+	<string name="Shoot">Κάμερα</string>
+	<string name="Attach">Αρχείο</string>
+	<string name="Description">Περιγραφή</string>
+	<string name="Proceed">Επόμενο</string>
+	<string name="ReportIss">Υποβολή</string>
+	<string name="IssueReported">Υποβλήθηκε</string>
+	<string name="SetManually">Δ\n ι\n ε\n ύ\n θ\n υ\n ν\n σ\n η</string>
+	<string name="DragMarker">Σύρε με</string>
+	<string name="LongerTitle">Παρακαλώ εισάγετε τον τίτλο του αιτήματος.</string>
+	<string name="PleaseAddress">Παρακαλώ γράψτε τη διεύθυνση χειροκίνητα</string>
+	<string name="Issueoutofmunicipalitylimits">Αίτημα εκτός εμβέλειας δήμου.</string>
+	
+	
+	<!--  View Issue -->
+	<string name="Reportedby">Αναφέρθηκε απο</string>
+	<string name="Viewed">Αναγνώστηκε</string>
+	<string name="Status">Κατάσταση</string>
+	<string name="AddComment">Σχολίασε</string>
+	<string name="VotesFix">Ψήφοι υπέρ της επίλυσης του αιτήματος</string>
+	<string name="VoteToFix">Ψήφισε για να φτιαχτεί</string>
+	<string name="CommentCreat">Σχολιάστηκε πριν από</string>
+	<string name="AgoBy">από τον/την</string>
+	<string name="AlreadyVoted">Έχετε ήδη ψηφίσει</string>
+	<string name="OnlyRegistered">Πρέπει να εγγραφείτε για να σχολιάσετε.</string>
+	<string name="PressLogin">Πατήστε για είσοδο.</string>
+	<string name="Map">Χάρτης</string>
+    
+	<string name="Image">Φωτογραφία</string>
+	<string name="Attachanimage">Επισύναψη φωτογραφίας</string>
+	<string name="Gallery">Συλλογή</string>
+	<string name="Camera">Κάμερα</string>
+	<string name="Clear">Όχι</string>
+	
+	<!-- Setup -->
+    <string name="CustAccount">Λογαρισμός χρήστη</string>
+    <string name="Username">Όνομα χρήστη</string>
+    <string name="Password">Κωδικός</string>
+    <string name="LatinChars">Λατινικούς χαρακτήρες</string>
+    <string name="GreekChars">στα Ελληνικά</string>
+    <string name="AccountOperations">Διαχείριση λογαριασμού</string>
+    <string name="LoginRegisterRemindLogout">Είσοδος/Εγγραφή/Υπενθύμιση/Έξοδος</string>
+    
+   <string-array name="AccountItems">
+        <item>Είσοδος</item>
+        <item>Εγγραφή</item>
+        <item>Υπενθύμιση</item>
+        <item>Έξοδος</item>
+    </string-array>
+    
+    
+    <string name="Language">Language</string>
+    <string name="LangSel">Επιλογή γλώσσας.</string>
+    <string name="IdonothaveA">Δεν εχω λογαριασμό</string>
+    <string name="Iforgot">Υπενθύμιση κωδικού</string>
+    
+    <string name="Location">Τοποθεσία</string>
+    <string name="ViewRange">Ακτίνα παρατήρησης</string>
+    <string name="ViewRadius">από τη τρέχουσα θέση.</string>
+	
+    <string name="IssuesNo">Αριθμός αιτημάτων</string>
+    <string name="IssuesMaxNo">Tαυτόχρονη απεικόνιση τελευταίων αιτημάτων.</string>
+    
+    
+    <string name="RemindTitle">Στείλε υπενθύμιση στο:</string>
+    <string name="RemindHint">Γράψε το email σου εδώ</string>
+    <string name="RemindButtonText">Υπενθύμιση κωδικού</string>
+    
+    <string name="System">Επιλογές συστήματος</string>
+    <string name="Refrinter">Ρυθμός ανανέωσης δεδομένων</string>
+    <string name="Restartneed">Απαιτείται επανεκκίνηση της εφαρμογής</string>
+    
+    <string name="Contact">Επικοινωνία</string>
+    
+    <string name="Information">Πληροφορίες</string>
+    
+    <string name="IntroTitle">Εισαγωγή</string>
+    <string name="WhatIsItTitle">Περιγραφή της εφαρμογής</string>
+    <string name="TestPhaseTitle">Φάση δοκιμών</string>
+    <string name="FeaturesTestsTitle">Δυνατότητες και δοκιμές</string>
+    <string name="ContactInfoTitle">Συγγραφείς</string>
+    <string name="Version">Έκδοση λογισμικού</string>
+    <string name="Helpinformationandcredits">Βοήθεια και πληροφορίες για τους συγγραφείς</string>
+    
+    <string name="Yourproposal">Η προτασή σου</string>
+    <string name="Sendemailwithyourideas">Στείλε την ιδέα σου με e-mail</string>
+    
+    <string name="Reset">Εκκαθάριση και επανεκκίνηση</string>
+    <string name="Deleteallissuedatastoredlocallytoyourphone">Διαγραφή όλων των αιτημάτων που αποθηκεύονται τοπικά στο τηλέφωνο</string>
+    
+    <string name="Areyousure">Σίγουρα ?</string>
+    <string name="Deleted">Διαγράφηκαν</string>
+    
+    <!--  About  -->
+    <string name="Intro">Το ImproveMyCityMobile μεταφέρει τη λειτουργικότητα της εφαρμογής ImproveMyCity σε ένα κινητό τηλέφωνο Android εκμεταλλευόμενο παράλληλα τη δυνατότητα γεωγραφικού προσδιορισμού που παρέχουν τα έξυπνα κινητά.</string>
+    <string name="WhatIsIt">Το ImproveMyCity είναι μια εφαρμογή που επιτρέπει στους πολίτες ενός Δήμου να υποβάλλουν εύκολα και γρήγορα πάσης φύσεως αιτήματα που αφορούν στη διαβίωση τους (π.χ., σπασμένες λάμπες, απουσία κάδου απορριμμάτων από μια γειτονιά, λακκούβες στους δρόμους, σπασμένα παγκάκια, επιπλέον φωτισμός σε κάποιο δρόμο, κλπ). Τα αιτήματα μεταβιβάζονται στη συνέχεια στην αρμόδια υπηρεσία του Δήμου όπου και δρομολογείται η διευθέτηση τους. Η web-based εκδοχή της εφαρμογής αναπτύχθηκε από την ερευνητική ομάδα του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης URENIO (www.urenio.org) στα πλαίσια του Ευρωπαϊκού έργου PEOPLE smart cities (http://www.people-project.eu/portal/) και βρίσκεται ήδη σε πλήρη λειτουργία από το Δήμο Θέρμης (smartcity.thermi.gov.gr/improve/).</string>
+    <string name="FeaturesTests">Ανάμεσα στις δυνατότητες της εφαρμογής περιλαμβάνονται:\n\n
+   -Υποβολή αιτήματος συνοδευόμενο από μια εικόνα που να απεικονίζει το πρόβλημα.\n
+   - Δυνατότητα παροχής ψήφου σε κάποιο από τα υπάρχοντα αιτήματα, όπως επίσης και ο σχολιασμός του.\n
+   - Επισκόπηση των αιτημάτων που έχουν υποβληθεί με τη βοήθεια χάρτη.\n
+   - Φιλτράρισμα των αιτημάτων που εμφανίζονται με βάση την κατηγορία του προβλήματος.\n
+   - Φιλτράρισμα των αιτημάτων με βάση μια καθορισμένη απόσταση από τη γεωγραφική θέση του κινητού.\n\n
+
+Οι τεχνικές απαιτήσεις της εφαρμογής περιλαμβάνουν:\n
+- Android version 2.2 (API 8 Froyo) ή μεταγενέστερο.\n
+- Μνήμη: H εφαρμογή απαιτεί 1 ΜΒ RAM για αποθήκευση. Για την ομαλή λειτουργία απαιτούνται 10 ΜΒ ελεύθερα στη RAM.\n
+- Επεξεργαστής: Τουλάχιστον 1GHz\n
+- Πρόσβαση στο Internet μέσω WiFi ή 3G\n
+- Προαιρετικά: GPS, κάμερα\n\n
+
+Δοκιμές έχουν πραγματοποιηθεί σε:\n
+- HTC Desire 1GHz με Android 2.2\n
+- Samsung Galaxy SIII 1.4GHz Quad Core με Android 4\n\n
+
+Για την αποστολή των παρατηρήσεων σας μπορείτε να:\n
+- Στείλετε e-mail στο improvemycitymobile@gmail.com, ή\n
+- Μέσω του google play.
+    </string>
+
+    <string name="ContactInfo">Σας ευχαριστούμε εκ των πρότερων για τη συνεργασία.\n\n
+        EKETA - Εθνικό Κέντρο Έρευνας και Τεχνολογικής Ανάπτυξης,\n 6ο χλμ. Χαριλάου-Θέρμης,\n
+Δημήτρης Βερβερίδης,\n Ιωάννης Τσαμπουλατίδης,\n Σπύρος Νικολόπουλος,\n Ιωάννης
+Κομπατσιάρης (ikom@iti.gr).</string>
+
+    
+    <string name="LogOut">Αποσύνδεση</string>
+    <string name="LoggedOut">Αποσυνδεθήκατε</string>
+    <string name="SendMail">Αποστολή e-mail</string>
+    
+    <string name="About">Σχετικά</string>
+    
+    <string name="Usage">Στατιστικά χρήσης εφαρμογής</string>
+	<string name="Analytics">Αποστολή στατιστικών</string>
+	<string name="HelpUs">Βοηθήστε στην βελτίωση αυτής της εφαρμογής αποστέλνοντας δεδομένα μέσω ιντερνετ</string>
+	
+    
+    <!-- Register -->
+    <string name="Register">Εγγραφή</string>
+    <string name="FirstSecondName">Όνομα και επίθετο*</string>
+    <string name="ValidEmail">Διεύθυνση e-mail</string>
+    <string name="MoreThan6Chars">Πάνω από 8 χαρακτήρες</string>
+    <string name="Cancel">Ακύρωση</string>
+    <string name="Submit">Υποβολή</string>
+    
+    <string name="Relationship">Σχέση*</string>
+    
+    <string-array name="RelOptions">
+        <item>Κάτοικος</item>
+        <item>Εργάζομαι εδώ</item>
+        <item>Επισκέπτης</item>
+    </string-array>
+				
+		
+	
+    
+    <!-- Messages -->
+    <string name="Welcome">Καλώς ήρθατε</string>
+	<string name="NoGPS">Παρακαλώ ενεργοποιήστε το GPS</string>
+	<string name="IncorUser">Λανθασμένο όνομα χρήστη ή κωδικός. Έχετε εγγραφεί?</string>
+	<string name="NoInternet">Δεν υπάρχει πρόσβαση στο Internet</string>
+        
+	<string name="WaitServer">Waiting for server to reply &#8230;</string>
+    <string name="NoServer">Server did not reply!</string>
+    <string name="NoCamera">Camera not available!</string>
+    <string name="YesGPS">GPS Enabled.</string>
+    <string name="ReqFix">Request location fix.</string>       
+    <string name="Pause">Pause</string>
+    <string name="GoMaps">Map directions to go there</string>
+    <string name="YesInternet">Internet accessible.</string>
+	
+    
+
+    
+    <string name="SyncData">Συγχρονισμός δεδομένων</string>
+    <string name="Refresh">Ανανέωση</string>
+    <string name="DistanceView">Αιτήματα στο νέο βεληνεκές</string>
+    <string name="IssuesNoCh">Νέο πλήθος αιτημάτων</string>
+    <string name="FiltersCh">Αιτήματα βάσει νέων φίλτρων</string>
+    <string name="NewIssueCh">Ανανέωση αιτημάτων για λήψη νέου αιτήματος</string>
+    <string name="LocationCh">Αιτήματα στη νέα τοποθεσία</string>
+	
+	
+	<!--  Arrays  -->
+    <string-array name="Language">
+        <item>el - Ελληνικά</item>
+        <item>en - English</item>
+    </string-array>  
+	
+       <string-array name="refrateoptions">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>60</item>
+    </string-array>
+    
+    <string-array name="refrateoptions_entries">
+        <item>1 λεπτό</item>
+        <item>5 λεπτά (προτείνεται)</item>
+        <item>10 λεπτά</item>
+        <item>1 ώρα</item>
+    </string-array>
+    
+    
+    <string-array name="maxno_issues">
+        <item>20</item>
+        <item>40</item>
+        <item>80</item>
+        <item>200</item>
+        <item>400</item>
+    </string-array>
+    
+    <string-array name="maxno_issues_entries">
+        <item>20 αιτήματα</item>
+        <item>40 αιτήματα (προτείνεται)</item>
+        <item>80 αιτήματα</item>
+        <item>200 αιτήματα</item>
+        <item>400 αιτήματα</item>
+    </string-array>
+</resources>

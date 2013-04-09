@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape      xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+    
+    <solid android:color="#88999999"/>
+    
+    <corners
+        android:topLeftRadius    ="100px"
+        android:topRightRadius   ="0dip"
+        android:bottomLeftRadius ="0dip"       
+        android:bottomRightRadius="100px" />
+    <size
+        android:width="55dp"
+        android:height="70dp" />
+    
+    
+</shape>
+<!-- A 2.29 SWAP bLR with bRR-->

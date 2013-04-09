@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical" 
+    android:gravity="center"
+    android:background="#790102"
+    android:layout_gravity="center">
+
+
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_imc_username"
+        android:hint="@string/Username"
+        android:singleLine="true"/>
+    
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:id="@+id/et_imc_email"
+        android:hint="@string/email"/>
+    
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_imc_Password"
+        android:inputType="textPassword"
+        android:hint="@string/Password"/>
+    
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_imc_name"
+        android:inputType="textPersonName"
+        android:hint="@string/Yourfullname"/> 
+
+    <Button
+        android:id="@+id/bt_imc_register"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/gradient_green"
+        android:drawableLeft="@drawable/tick"
+        android:padding="10dp"
+        android:text="@string/Register"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+</LinearLayout>
+

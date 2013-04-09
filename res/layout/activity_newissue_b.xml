@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:id = "@+id/llnewissue"
+            >
+    
+    
+    <RelativeLayout 
+  	android:layout_width="match_parent"
+  	android:layout_height="0dip"
+  	android:layout_weight="5">
+    
+        
+    
+    
+
+    <com.mk4droid.IMC_Core.MapView_TapZoom
+        android:id="@+id/mapview_new_issue"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:apiKey="@string/google_map_api_key"
+        android:clickable="true" />
+    
+   
+    
+    <ImageView android:id="@+id/drag"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:paddingTop="50px"
+    	android:src="@drawable/target200"
+    	android:visibility="gone"/>
+
+
+
+    <SlidingDrawer
+            android:id="@+id/slidingDrawer_Address"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:content="@+id/content_Address"
+            android:handle="@+id/handle_Address"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+        
+
+         <Button
+             android:id="@+id/handle_Address"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom ="true"
+             android:layout_alignParentRight  ="true"
+             android:drawableTop="@drawable/arrow_right"
+             android:paddingTop="25dp"
+             android:background="@drawable/shape_convex_right_andr4" />
+        
+            <LinearLayout
+                android:id="@+id/content_Address"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" 
+                android:background="#99888888">
+                
+                <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:lines="3"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+                 
+            </LinearLayout>
+
+        </SlidingDrawer>
+
+    
+
+    <TextView
+        android:id="@+id/tvgap"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btReport_new_issue"
+        
+        
+         />
+    
+    
+    <Button
+        android:id="@+id/btReport_new_issue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        
+        
+         android:layout_above="@+id/tvgap"
+        
+        android:background="@drawable/gradient_green"
+        android:drawableLeft="@drawable/tick"
+        android:onClick="onClick"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
+        android:text="@string/ReportIss"
+        android:textColor="#fff" />
+    
+    </RelativeLayout>
+</LinearLayout>
