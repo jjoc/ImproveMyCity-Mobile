@@ -51,7 +51,7 @@ public class Activity_Setup extends PreferenceActivity {
     SharedPreferences prefs;
     TextView tvSetupTitle;
     
-    String LangSTR = "el", PassSTR, UserNameSTR;
+    String LangSTR, PassSTR, UserNameSTR;
 
 	public static String UserRealName;
 
@@ -76,6 +76,8 @@ public class Activity_Setup extends PreferenceActivity {
 
         PreferenceManager.setDefaultValues(this, R.xml.myprefs, true);
         
+
+        
         //------ Load User Name and Pass from preferences
         setContentView(R.layout.activity_setup);
         addPreferencesFromResource(R.xml.myprefs);
@@ -98,6 +100,7 @@ public class Activity_Setup extends PreferenceActivity {
     	prefIssuesNo     = findPreference("IssuesNoAR");
     	prefFlurryAnal   = findPreference("AnalyticsSW");
     	prefDistance     = findPreference("distance_seekBar");
+    	
     	
 //        preferenceUN.setOnPreferenceChangeListener(prefUN_change);
 //        preferencePass.setOnPreferenceChangeListener(prefPass_change);
@@ -126,7 +129,7 @@ public class Activity_Setup extends PreferenceActivity {
     protected void onResume(){
     	super.onResume();
     	resources  = setResources();
-
+    	
     	if (InternetConnCheck.getInstance(ctx).isOnline(ctx)){
     		prefIssuesNo.setEnabled(true);
     		prefRefrate.setEnabled(true);
@@ -272,7 +275,7 @@ public class Activity_Setup extends PreferenceActivity {
         emailSTR       = prefs.getString("emailAR"    , "");
 		PassSTR        = prefs.getString("PasswordAR" , "");
 		UserRealName   = prefs.getString("UserRealName" , "");
-		LangSTR        = prefs.getString("LanguageAR" , "el");
+		LangSTR        = prefs.getString("LanguageAR" , Constants_API.DefaultLanguage);
 		RefrateSTR     = prefs.getString("RefrateAR"  , "");
     	    	
    	    Configuration conf = getResources().getConfiguration();

@@ -237,7 +237,7 @@ public class Activity_NewIssueA extends ActivityGroup{
 	public Resources SetResources(){
 	
 		SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-	    String LangSTR          = mshPrefs.getString("LanguageAR", "el");
+	    String LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
 		
 	    usernameSTR      = mshPrefs.getString("UserNameAR", "");
 	    passwordSTR      = mshPrefs.getString("PasswordAR", "");

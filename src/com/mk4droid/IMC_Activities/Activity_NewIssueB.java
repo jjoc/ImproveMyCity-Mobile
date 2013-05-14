@@ -542,7 +542,7 @@ public class Activity_NewIssueB extends MapActivity implements View.OnClickListe
 	public Resources SetResources(){
 
 		SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-		String LangSTR          = mshPrefs.getString("LanguageAR", "el");
+		String LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
 		UserID_STR              = mshPrefs.getString("UserID_STR", "");
 
 		UserNameSTR      = mshPrefs.getString("UserNameAR", "");

@@ -2,13 +2,13 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Βελτιώνω την πόλη μου - Δήμος Θέρμης</string>
+    <string name="app_name">Improve My City - Municipality Thermi</string>
     <string name="CERTH">CERTH, iti.gr</string>
     <string name="google_map_api_key" translatable="false">000000000000000000000000</string>
     
     
     <!--          Splash Register  -->
-    <string name="welcometo">Δήμος Θέρμης - Smart City Services</string>
+    <string name="welcometo">Municipality of Thermi - Smart City Services</string>
     <string name="Login">Login</string>
     <string name="skipLogin">Enter as a Guest</string>
     <string name="Registration">Registration</string>
@@ -158,34 +158,34 @@
     
     
     <!--  About  -->    
-    <string name="WhatIsItTitle">Description of the Application</string>
-    <string name="FeaturesTestsTitle">Features and tests</string>
+    <string name="WhatIsItTitle">Description</string>
+    <string name="FeaturesTestsTitle">Features</string>
     <string name="ContactInfoTitle">Authors</string>
 
-    <string name="WhatIsIt">ImproveMyCity is an application that allows citizens to submit all types of issues related to their neighbourhood (e.g. broken lamps, absence of trashbins, street potholes, broken benches, extra street light etc.). Next, the issues are transfered to the respective service of the municipality in order to be fixed. The web-based version of the application was developed from the research team of the Aristotle University of Thessaloniki under the European project PEOPLE smart cities (http://www.people-project.eu/portal/) and it is used from the municipality of Thermi (smartcity.thermi.gov.gr/improve/).</string>
+    <string name="WhatIsIt">ImproveMyCityMobile is an application for mobiles phones that allows citizens to report all types of issues related to their neighborhood (e.g. broken labs, abandoned cars, absence of trashbins, etc). The reported issues are immediately transferred to the appropriate municipality department in order to get fixed. ImproveMyCityMobile is the best solution for the citizens to improve their city in collaboration with their administration.\n\n
+        Municipality:\nThis mobile app has been customized for the needs of the municipality of Thermi-Thessaloniki and is fully interconnected with the corresponding web-based application (https://smartcity.thermi.gov.gr/improve/en/).</string>
     
-    <string name="FeaturesTests">The application allows for:\n\n
-   - submitting issues together with an image.\n
-   - voting an already reported issue, as well as commenting it.\n
-   - viewing all issues on a map.\n
-   - filtering of issues such as category based or user-distance based filtering.\n\n
-
+    <string name="FeaturesTests">
+- Automatic extraction of the GPS coordinates of the reported issue;\n
+- Photographing the issue using the phone\'s camera;\n
+- Voting and/or providing comments on issues already reported by other citizens Map-based view of the
+reported issues;\n 
+- Feedback about the progress status of the reported issues.\n\n
+        
 Technical requirements:\n
-- Android version 2.2 (API 8 Froyo) or later;.\n
+- Android version 2.2 (API 8 Froyo) or later;\n
 - 1 MB of RAM to install and 10 ΜΒ of RAM to run;\n
 - 1GHz Processor;\n
 - Internet access;\n
 - GPS and camera (optional) \n\n
 
 Report your opinion:\n
-- by e-mail at improvemycitymobile@gmail.com\n
+- by e-mail at improvemycitymobile@gmail.com
     </string>
 
-    <string name="ContactInfo">Thank you for your co-operation.\n\n
-        CERTH - Centre for Research and Technology Hellas,\n 6ο km. Charilaou-Thermi, Greece\n
-Dimitrios Ververidis,\n Ioannis Tsampoulatidis,\n Spiros Nikolopoulos,\n Ioannis Kompatsiaris (ikom@iti.gr).</string>
-    
-        
+    <string name="ContactInfo">
+        CERTH-ITI Multimedia group (http://mklab.iti.gr/)\n AUTH-URENIO (http://www.urenio.org)</string>
+            
     
      <string name="LogOut">Log out</string>
      <string name="LoggedOut">Logged out</string>

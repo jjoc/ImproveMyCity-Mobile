@@ -283,9 +283,6 @@ public final class R {
         public static final int Image=0x7f060043;
         public static final int IncorUser=0x7f06008c;
         public static final int Information=0x7f06006c;
-        /**   About  
-         */
-        public static final int Intro=0x7f06009e;
         public static final int IntroTitle=0x7f06009c;
         public static final int IssueReported=0x7f06003e;
         public static final int Issueoutofmunicipalitylimits=0x7f060048;
@@ -394,6 +391,8 @@ public final class R {
  Messages 
          */
         public static final int Welcome=0x7f060089;
+        /**   About  
+         */
         public static final int WhatIsIt=0x7f060078;
         /**   About  
          */

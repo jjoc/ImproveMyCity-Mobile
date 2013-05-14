@@ -489,7 +489,7 @@ public class Activity_Issue_Details extends ActivityGroup {
 	/** Load session settings */
 	public Resources setResources(){
 		SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-	    LangSTR          = mshPrefs.getString("LanguageAR", "el");
+	    LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
         UserNameSTR      = mshPrefs.getString("UserNameAR", "");
 	    PasswordSTR      = mshPrefs.getString("PasswordAR", "");
 	    IssuesNoSTR      = mshPrefs.getString("IssuesNoAR", "40");

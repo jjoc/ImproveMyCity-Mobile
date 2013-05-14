@@ -9,6 +9,7 @@ import com.mk4droid.IMC_Constructors.Issue;
 import com.mk4droid.IMC_Constructors.IssueListItem;
 import com.mk4droid.IMC_Core.Issues_ListAdapter;
 import com.mk4droid.IMC_Services.Service_Data;
+import com.mk4droid.IMC_Store.Constants_API;
 
 import android.app.ActivityGroup;
 import android.app.ProgressDialog;
@@ -50,7 +51,7 @@ public class Activity_List extends ActivityGroup {
 	Context ctx;
 	int tlv = Toast.LENGTH_LONG;
 	ListView lv;
-	String LangSTR = "el";
+	String LangSTR;
 	public static Resources resources;
 	
 	String UserID_STR = "";
@@ -250,7 +251,7 @@ public class Activity_List extends ActivityGroup {
 	 */
 	public Resources setResources(){
 		
-	    LangSTR          = mshPrefs.getString("LanguageAR", "el");
+	    LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
 	    	    
 	    OpenSW                = mshPrefs.getBoolean("OpenSW", true);
     	AckSW                 = mshPrefs.getBoolean("AckSW", true);

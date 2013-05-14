@@ -58,7 +58,7 @@ public class Activity_Filters extends Activity implements OnCheckedChangeListene
 	
 	int tlv = Toast.LENGTH_LONG;
     Resources resources;     //  for Language
-    String LangSTR = "el";
+    String LangSTR;
     
     TextView tvFiltTitle_Constr,tvFiltTitle_Issues;
     Button btSelectAllFilters, btReverseAllFilters;
@@ -418,7 +418,7 @@ public class Activity_Filters extends Activity implements OnCheckedChangeListene
 	 */
 	public Resources setResources(){
 		SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-	    String LangSTR          = mshPrefs.getString("LanguageAR", "el");
+	    String LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
 	    OpenSW                = mshPrefs.getBoolean("OpenSW", true);
     	AckSW                 = mshPrefs.getBoolean("AckSW", true);
     	ClosedSW              = mshPrefs.getBoolean("ClosedSW", true);

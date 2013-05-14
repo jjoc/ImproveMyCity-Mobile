@@ -51,7 +51,7 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
 	
 	static Handler handlerRegisterButtonDisable;
 	EditText et_username, et_password;
-	String LangSTR="el", usernameSTR="", passwordSTR="", emailSTR = "";
+	String LangSTR, usernameSTR="", passwordSTR="", emailSTR = "";
 	Context ctx;
 	Resources resources;
 	boolean AuthFlag = false;
@@ -230,7 +230,7 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
     /** Retrieve preferences and set resources language */ 
 	public Resources setResources(){
 		SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-	    LangSTR          = mshPrefs.getString("LanguageAR", "el");
+	    LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
         
 	    usernameSTR      = mshPrefs.getString("UserNameAR", "");
 	    emailSTR         = mshPrefs.getString("emailAR", "");

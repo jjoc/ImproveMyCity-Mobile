@@ -4,7 +4,7 @@ package com.mk4droid.IMC_Store;
 /**
  * Customization for your application is feasible here.
  * HINT: Be careful when to use http:// or https:// in downloading and uploading data. It highly depends on your platform
- * HINT2: Be careful with the paths of your remote server. Paths may differ per implementation.
+ * HINT2: Be careful with the paths of your remote server. Paths may differ per installation configuration.
 
  * Constants visible everywhere in the app.
  * 
@@ -18,7 +18,7 @@ package com.mk4droid.IMC_Store;
  */
 public class Constants_API {
 	
-	/** TAG for Log of messages to alleviate debugging */
+	/** TAG for Log of messages to alleviate debugging  */
 	public static String TAG = "ImproveMyCity";
 		
 	//==================== Communication parameters =================
@@ -37,16 +37,24 @@ public class Constants_API {
 	/** Server path of issue images */ 
 	public static String remoteImages      = "/improve/";
 	
-	/** Encryption key for transmitting password */
-	public static String EncKey =  "0000000000000000"; 
+	/** Encryption key for transmitting password (16 digits). It should be the same as in your ImproveMyCity joomla component. 
+	 * The default value is 1234567890123456.
+	 * */
+	public static String EncKey =  "1234567890123456"; 
 		
-	
+	/**
+	 * Default menu language, options: "en - English" or  "el - Ελληνικά"
+	 * 
+	 * Go also to res/myprefs.xml to android:key="LanguageAR" and set 
+	 * android:defaultValue="el - Ελληνικά"  or "en - English" in order to have a correct initial value for the radius buttons.
+	 */
+	public static String DefaultLanguage = "en - English";
 	
 	
 	//====== GEOGRAPHIC  Limits ============
 	/** Geographical limits (rectangle) from where issues can be sent */
 	                                        // North   South    East      West              
-    public static double[] AppGPSLimits =   {40.57,  40.41,    23.24,   22.93};
+    public static double[] AppGPSLimits =   {90,        -90,    180,     -180};
 
     //============ Gather usage analytics ================
 	/** Key for Flurry analytics that monitors usage of application see www.flurry.com 
@@ -72,17 +80,4 @@ public class Constants_API {
      * 
      * See in android developer about how to generate map api keys according to your android key.  
      */
-	
-	//===== UI default language ==========
-	/**
-	 * 	 To set UI default language see at res/myprefs.xml go to
-	 * 
-	 *    android:key="LanguageAR"
-	 *    
-	 *    and set 
-	 *    
-	 *   android:defaultValue="el"  or "en"
-	 * 
-	 */
-
 }

@@ -10,19 +10,6 @@
            android:title="@string/CustAccount"
            android:layout="@layout/pref_categories_layout"
            >
-          
-         <!-- 
-        <EditTextPreference android:title="@string/Username"
-                android:inputType="text" android:summary="@string/LatinChars"  
-                android:key="UserNameAR" android:persistent="true"
-                />
-        
-               
-        <EditTextPreference android:title="@string/Password"
-                android:inputType="textPassword" android:summary="@string/LatinChars"
-                android:key="PasswordAR" android:persistent="true"
-                />
-                 -->
         
          <com.mk4droid.IMC_Core.Preference_AccountOperations
 			android:key="Account_Operations_IMC"
@@ -37,7 +24,8 @@
                 android:title="@string/Language"
                 android:layout="@layout/pref_categories_layout">
         <ListPreference android:title="Language" android:summary="@string/LangSel" android:key="LanguageAR"
-                        android:defaultValue="el" android:entries="@array/Language"
+                         android:defaultValue="en - English"
+                         android:entries="@array/Language"
                         android:entryValues="@array/Language" />
      </PreferenceCategory>
      
@@ -67,7 +55,7 @@
                         android:entryValues="@array/maxno_issues" />
          <CheckBoxPreference
                         android:title="@string/Analytics"
-                        android:defaultValue="true"
+                        android:defaultValue="false"
                         android:summary="@string/HelpUs"
                         android:key="AnalyticsSW"/>
      </PreferenceCategory>

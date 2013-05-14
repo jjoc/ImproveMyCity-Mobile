@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Locale;
 import com.mk4droid.IMCity_Pack.R;
 import com.mk4droid.IMC_Services.Service_Data;
+import com.mk4droid.IMC_Store.Constants_API;
 
 
 import android.app.ActivityManager;
@@ -89,7 +90,7 @@ public class Activity_TabHost extends TabActivity implements OnTabChangeListener
 	Configuration conf;
 	String UserNameSTR = "";
 	String PasswordSTR = "";
-	String LangSTR     = "el"; // Preferences Vars el=Greek, en=English
+	String LangSTR; 
 	     
     DisplayMetrics metrics;
         
@@ -374,7 +375,7 @@ public class Activity_TabHost extends TabActivity implements OnTabChangeListener
 	
 	public Resources SetResources(){
 		SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-	    LangSTR          = mshPrefs.getString("LanguageAR", "el");
+	    LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
         UserNameSTR      = mshPrefs.getString("UserNameAR", "");
 	    PasswordSTR      = mshPrefs.getString("PasswordAR", "");
 	    

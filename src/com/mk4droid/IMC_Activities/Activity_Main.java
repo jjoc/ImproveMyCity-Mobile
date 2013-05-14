@@ -144,11 +144,8 @@ public class Activity_Main extends MapActivity implements OnClickListener{
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    
-	    
-	    
 	    mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 	    
-		
 		//---------------- Set GUI -------------------
 	    resources = SetResources();
 	    setContentView(R.layout.activity_main);
@@ -515,14 +512,11 @@ public class Activity_Main extends MapActivity implements OnClickListener{
 							minLong = Math.min((int) (Service_Data.mIssueL.get(i)._longitude*1E6), minLong);
 
 							//---------- GPS coords --------
-
 							GeoPoint point = new GeoPoint((int) (Service_Data.mIssueL.get(i)._latitude*1E6),
 									                      (int) (Service_Data.mIssueL.get(i)._longitude*1E6));
 
-
 							OverlayItem overlayitem = new OverlayItem(point, Service_Data.mIssueL.get(i)._title, 
 									           "I:" + Integer.toString(Service_Data.mIssueL.get(i)._id));
-
 							
 							//------------- Add to mapOverlays ------------
 							itemizedoverlay_Categ.addOverlay(overlayitem);
@@ -610,7 +604,7 @@ public class Activity_Main extends MapActivity implements OnClickListener{
 	 */
 	public Resources SetResources(){
 
-		LangSTR          = mshPrefs.getString("LanguageAR", "el");
+		LangSTR          = mshPrefs.getString("LanguageAR", Constants_API.DefaultLanguage);
 		UserID_STR       = mshPrefs.getString("UserID_STR", "");
 
 		OpenSW                = mshPrefs.getBoolean("OpenSW", true);

@@ -116,10 +116,10 @@
              android:layout_marginBottom="10dp"
              android:padding="10dp"
              android:textAppearance="?android:attr/textAppearanceMedium"
-             android:textStyle="bold"
              android:gravity="center"
              android:textColor="#000"
              android:linksClickable="true"
+             android:autoLink="web"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             />

@@ -19,6 +19,7 @@ import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
 import com.mk4droid.IMC_Constructors.Issue;
 import com.mk4droid.IMC_Services.Service_Data;
+import com.mk4droid.IMC_Store.Constants_API;
 import com.mk4droid.IMCity_Pack.R;
 
 
@@ -203,7 +204,7 @@ public class Activity_SoloMap extends MapActivity {
 	 */
     public Resources SetResourc(){
 		SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-		LangSTR                    = mshPrefs.getString("Language", "el").substring(0, 2);
+		LangSTR                    = mshPrefs.getString("Language", Constants_API.DefaultLanguage).substring(0, 2);
 		    	
         Configuration conf = getResources().getConfiguration();
         conf.locale = new Locale(LangSTR);
