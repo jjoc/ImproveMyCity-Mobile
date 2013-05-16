@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" 
+            classpath="libs/FlurryAgent.jar;C:\Program Files\adt-bundle-windows-x86\sdk\tools\support\annotations.jar" 
+            destdir="C:\Users\jimver_user_laptop\Desktop\VerveridisCode\DEMOS\AndroidApps\ImproveMyCity_Project\doc" doctitle="Improve My City for Android - documentation " nodeprecated="true" nodeprecatedlist="true" noindex="false" nonavbar="false" notree="false" packagenames="com.mk4droid.IMC_Activities,com.mk4droid.IMC_Core,com.mk4droid.IMC_Constructors,com.mk4droid.IMC_Services,com.mk4droid.IMC_Utils,com.mk4droid.IMC_Store,com.mk4droid.IMCity_Pack" source="1.6" sourcepath="gen;src" splitindex="true" use="true" version="true">
+            <link href="file:/C:/Users/jimver_user_laptop/Desktop/VerveridisCode/DEMOS/AndroidApps/ImproveMyCity_Project/doc"/>
+        </javadoc>
+    </target>
+</project>
