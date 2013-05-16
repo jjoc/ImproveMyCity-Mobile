@@ -52,8 +52,11 @@ public class Constants_API {
 	
 	
 	//====== GEOGRAPHIC  Limits ============
-	/** Geographical limits (rectangle) from where issues can be sent */
-	                                        // North   South    East      West              
+	/** Geographical limits (rectangle) from where issues can be sent 
+    * Define the upper left and the lower right corners of the rectangle by setting the values of (LatMax, LatMin, LonMax, LongMin)               
+    * These values can be easily obtained by GoogleMaps by right-clicking on the desired points and selecting “What is here”.
+    * */ 
+	                                        // {LatitudeMax ,  LatitudeMin ,  LongitudeMax ,  LongitudeMin}              
     public static double[] AppGPSLimits =   {90,        -90,    180,     -180};
 
     //============ Gather usage analytics ================

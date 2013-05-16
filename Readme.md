@@ -1,19 +1,23 @@
-### Localize your app
+# ImproveMyCity Mobile :: Android version
 
-Server: 
-src.com.mk4droid.IMC_Store/Constants_AP.java -> ``ServerSTR = "myserver.com"``;
+![Screenshots from the application](http://mklab.iti.gr/imc/imcm01.png)
 
-Deployment area: 
-src.com.mk4droid.IMC_Store/Constants_AP.java -> AppGPSLimits =   {40.57,  40.41,    23.24,   22.93}; // (latitudeMax,latitudeMin,longitudeMax,longitudeMin)
+ImproveMyCity-Mobile is the Android counterpart of the [IMC Joomla component](http://extensions.joomla.org/extensions/clients-a-communities/communities/21164) to report, vote and track non-emergency issues. 
 
-### Place your keys 
+The application enables citizens to report local problems such as potholes, illegal trash dumping, faulty street lights, broken tiles on sidewalks, and illegal advertising boards. The submitted issues are displayed on the city's map. Users may add photos and comments. Moreover, they can suggest solutions for improving the environment of their neighbourhood. The mobile application fully resembles the functionality of the web version, adding some additional features. [Learn more...](http://mklab.iti.gr/imc/index_en.html)
 
-Google map key:
-res/values/strings.xml ->  
-``<string name="google_map_api_key" translatable="false">000000000000000000000000</string>``
 
-Joomla/ImproveMyCity encryption key: 
-src.com.mk4droid.IMC_Store/Constants_AP.java -> ``EncKey = "adadasdasdasdasd"``
+### Installation and Documentation
+Refer to ImproveMyCity-Mobile [github pages](http://mklab-iti.github.io/ImproveMyCity-Mobile/).
 
-(Optional) Flurry analytics (www.Flurry.com): 
-src.com.mk4droid.IMC_Store/Constants_AP.java -> ``Flurry_key = "zxzxczxczxczxcxzc"``
+### Bug Tracker
+Have a bug? Please create an issue here on GitHub!
+[https://github.com/MKLab-ITI/ImproveMyCity-Mobile/issues](https://github.com/MKLab-ITI/ImproveMyCity-Mobile/issues).
+
+### License
+ImproveMyCity-Mobile source code is licensed under the [GNU Affero General Public License](https://www.gnu.org/licenses/agpl.html).
+
+### Changelog
+
+#### Version 1.0
+* Initial version
