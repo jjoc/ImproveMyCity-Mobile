@@ -5,7 +5,7 @@ package com.mk4droid.IMC_Activities;
 import java.util.Locale;
 
 import com.flurry.android.FlurryAgent;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Services.InternetConnCheck;
 import com.mk4droid.IMC_Store.Constants_API;
 

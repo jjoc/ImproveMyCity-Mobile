@@ -2,13 +2,13 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Improve My City - Municipality Thermi</string>
+    <string name="app_name">Improve My City - Demo</string>
     <string name="CERTH">CERTH, iti.gr</string>
     <string name="google_map_api_key" translatable="false">000000000000000000000000</string>
     
     
     <!--          Splash Register  -->
-    <string name="welcometo">Municipality of Thermi - Smart City Services</string>
+    <string name="welcometo">Demo - Smart City Services</string>
     <string name="Login">Login</string>
     <string name="skipLogin">Enter as a Guest</string>
     <string name="Registration">Registration</string>

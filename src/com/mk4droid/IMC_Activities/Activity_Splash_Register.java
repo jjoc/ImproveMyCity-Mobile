@@ -9,7 +9,7 @@ import com.mk4droid.IMC_Services.Security;
 import com.mk4droid.IMC_Services.Upload_Data;
 import com.mk4droid.IMC_Store.Constants_API;
 import com.mk4droid.IMC_Store.Phptasks;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -71,7 +71,7 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
 	    TextView tv_title = (TextView) findViewById(R.id.tv_app_title);
 	    //-------- Set IMC Logo from cropping from icon ---------
 	    ImageView imvIMCLogo = (ImageView)findViewById(R.id.imvIMCLogo); 
-	    Bitmap bmIMCLogoFull = ((BitmapDrawable) resources.getDrawable(R.drawable.imc_logo_thermi) ).getBitmap();
+	    Bitmap bmIMCLogoFull = ((BitmapDrawable) resources.getDrawable(R.drawable.imc_logo) ).getBitmap();
 	    	    
 	    Bitmap bmIMCLogo = Bitmap.createBitmap(bmIMCLogoFull,  10,    5, (int)  (0.9*bmIMCLogoFull.getWidth()),  (int)   (0.72*bmIMCLogoFull.getHeight()));
 	    //imvIMCLogo.setImageDrawable(new BitmapDrawable(bmIMCLogo));

@@ -13,7 +13,7 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Core.MapIssues_ItemizedOverlay;
 import com.mk4droid.IMC_Services.InternetConnCheck;
 import com.mk4droid.IMC_Services.Service_Data;

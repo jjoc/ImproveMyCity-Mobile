@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.mk4droid.IMC_Utils.My_System_Utils;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 
 import android.app.ActivityGroup;
 import android.app.AlertDialog;

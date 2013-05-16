@@ -2,7 +2,7 @@
 
 package com.mk4droid.IMC_Core;
 
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Activities.Activity_Filters;
 import com.mk4droid.IMC_Services.DatabaseHandler;
 

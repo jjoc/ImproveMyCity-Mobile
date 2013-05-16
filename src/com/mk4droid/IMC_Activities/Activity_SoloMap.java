@@ -20,7 +20,7 @@ import com.google.android.maps.OverlayItem;
 import com.mk4droid.IMC_Constructors.Issue;
 import com.mk4droid.IMC_Services.Service_Data;
 import com.mk4droid.IMC_Store.Constants_API;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 
 
 import android.content.Context;

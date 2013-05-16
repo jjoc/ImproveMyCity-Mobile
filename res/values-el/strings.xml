@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="app_name">Βελτιώνω την πόλη μου - Δήμος Θέρμης</string>
+    <string name="app_name">Βελτιώνω την πόλη μου - Demo</string>
     <string name="CERTH">EKETA, iti.gr</string>
     
     <!--          Splash Register  -->
-    <string name="welcometo">Δήμος Θέρμης, Υπηρεσίες Έξυπνης Πόλης</string>
+    <string name="welcometo">Demo, Υπηρεσίες Έξυπνης Πόλης</string>
     <string name="Login">Είσοδος</string>
     <string name="skipLogin">Είσοδος ως επισκέπτης</string>
     <string name="Registration">Εγγραφή</string>

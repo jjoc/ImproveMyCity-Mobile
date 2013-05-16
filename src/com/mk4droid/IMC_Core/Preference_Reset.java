@@ -3,7 +3,7 @@ package com.mk4droid.IMC_Core;
 
 import com.mk4droid.IMC_Activities.Activity_TabHost;
 import com.mk4droid.IMC_Services.DatabaseHandler;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 
 import android.app.AlertDialog;
 import android.content.Context;

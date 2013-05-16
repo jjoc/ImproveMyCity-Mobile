@@ -25,17 +25,17 @@ public class Constants_API {
 	/** Transmitting protocol */
 	public static String COM_Protocol   = "http://";
 	
-	/** Secure transmitting protocol */
-	public static String COM_Protocol_S = "https://";
+	/** Secure transmitting protocol. If your server supports SSL then this should be https:// */
+	public static String COM_Protocol_S = "http://"; 
 	
     /** Server address. It can be a XXX.XXX.XXX.XXX address instead */
-	public static String ServerSTR          =  "smartcity.thermi.gov.gr";
+	public static String ServerSTR      =  "smartcitydemos.urenio.org";
 	
 	/** Server path of application */
-	public static String phpExec            = "/improve/el";
+	public static String phpExec        = "/";
 	
 	/** Server path of issue images */ 
-	public static String remoteImages      = "/improve/";
+	public static String remoteImages      = "/";
 	
 	/** Encryption key for transmitting password (16 digits). It should be the same as in your ImproveMyCity joomla component. 
 	 * The default value is 1234567890123456.

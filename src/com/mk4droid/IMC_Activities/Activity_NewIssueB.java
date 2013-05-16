@@ -48,7 +48,7 @@ import com.mk4droid.IMC_Services.Service_Location;
 import com.mk4droid.IMC_Services.Upload_Data;
 import com.mk4droid.IMC_Store.Constants_API;
 import com.mk4droid.IMC_Utils.GEO;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 
 /**
  * Second activity for submitting an issue: selecting the location of the issue and submit to remote server  

@@ -10,7 +10,7 @@ import com.mk4droid.IMC_Services.Security;
 import com.mk4droid.IMC_Services.Upload_Data;
 import com.mk4droid.IMC_Store.Constants_API;
 import com.mk4droid.IMC_Store.Phptasks;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

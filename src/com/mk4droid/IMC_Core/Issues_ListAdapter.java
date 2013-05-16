@@ -4,7 +4,7 @@ package com.mk4droid.IMC_Core;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Activities.Activity_List;
 import com.mk4droid.IMC_Constructors.IssuePic;
 import com.mk4droid.IMC_Constructors.IssueListItem;

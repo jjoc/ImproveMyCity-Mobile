@@ -21,7 +21,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.maps.GeoPoint;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Activities.Activity_Main;
 import com.mk4droid.IMC_Activities.Activity_TabHost;
 import com.mk4droid.IMC_Constructors.Category;

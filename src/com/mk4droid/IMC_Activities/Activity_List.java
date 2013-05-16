@@ -4,7 +4,7 @@ package com.mk4droid.IMC_Activities;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Constructors.Issue;
 import com.mk4droid.IMC_Constructors.IssueListItem;
 import com.mk4droid.IMC_Core.Issues_ListAdapter;

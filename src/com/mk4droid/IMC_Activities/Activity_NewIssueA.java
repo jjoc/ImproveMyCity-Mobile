@@ -24,7 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.flurry.android.FlurryAgent;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Constructors.Category;
 import com.mk4droid.IMC_Core.SpinnerAdapter_NewIssueCateg;
 import com.mk4droid.IMC_Services.Security;

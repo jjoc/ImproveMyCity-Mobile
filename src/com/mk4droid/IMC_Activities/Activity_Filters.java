@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import com.flurry.android.FlurryAgent;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Core.FilterCateg_ExpandableListAdapter;
 import com.mk4droid.IMC_Services.DatabaseHandler;
 import com.mk4droid.IMC_Services.Service_Data;

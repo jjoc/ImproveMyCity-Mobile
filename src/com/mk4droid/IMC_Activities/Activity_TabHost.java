@@ -7,7 +7,7 @@ package com.mk4droid.IMC_Activities;
 
 import java.util.List;
 import java.util.Locale;
-import com.mk4droid.IMCity_Pack.R;
+import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Services.Service_Data;
 import com.mk4droid.IMC_Store.Constants_API;
 
