@@ -7,20 +7,21 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 
 import com.mk4droid.IMC_Store.Constants_API;
 
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningServiceInfo;
+import android.content.Context;
 import android.util.Log;
 
 /**
  * Android system utilities: Copy a file
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class My_System_Utils {
@@ -59,6 +60,26 @@ public class My_System_Utils {
 		//------------------------------------
 	}
 
+	
+	
+    /**        isServiceRunning
+	 * 
+	 * Check if a service is running (Data or Location)
+	 * 
+	 * @param serviceClassName
+	 * @return
+	 */
+	public static boolean isServiceRunning(String serviceClassName, Context ctx){
+        final ActivityManager activityManager = (ActivityManager)ctx.getSystemService(Context.ACTIVITY_SERVICE);
+        final List<RunningServiceInfo> services = activityManager.getRunningServices(Integer.MAX_VALUE);
+
+        for (RunningServiceInfo runningServiceInfo : services) {
+            if (runningServiceInfo.service.getClassName().equals(serviceClassName)){
+                return true;
+            }
+        }
+        return false;
+     }
 }
 
 

@@ -75,8 +75,6 @@
 	<string name="Proceed">Επόμενο</string>
 	<string name="ReportIss">Υποβολή</string>
 	<string name="IssueReported">Υποβλήθηκε</string>
-	<string name="SetManually">Δ\n ι\n ε\n ύ\n θ\n υ\n ν\n σ\n η</string>
-	<string name="DragMarker">Σύρε με</string>
 	<string name="LongerTitle">Παρακαλώ εισάγετε τον τίτλο του αιτήματος.</string>
 	<string name="PleaseAddress">Παρακαλώ γράψτε τη διεύθυνση χειροκίνητα</string>
 	<string name="Issueoutofmunicipalitylimits">Αίτημα εκτός εμβέλειας δήμου.</string>
@@ -103,6 +101,7 @@
 	<string name="Clear">Όχι</string>
 	
 	<!-- Setup -->
+	<string name="Return">Επιστροφή</string>
     <string name="CustAccount">Λογαρισμός χρήστη</string>
     <string name="Username">Όνομα χρήστη</string>
     <string name="Password">Κωδικός</string>
@@ -142,14 +141,9 @@
     
     <string name="Contact">Επικοινωνία</string>
     
-    <string name="Information">Πληροφορίες</string>
-    
-    <string name="IntroTitle">Εισαγωγή</string>
-    <string name="WhatIsItTitle">Περιγραφή της εφαρμογής</string>
-    <string name="TestPhaseTitle">Φάση δοκιμών</string>
-    <string name="FeaturesTestsTitle">Δυνατότητες και προδιαγραφές</string>
-    <string name="ContactInfoTitle">Συγγραφείς</string>
+   
     <string name="Version">Έκδοση λογισμικού</string>
+       <string name="Information">Πληροφορίες</string>
     <string name="Helpinformationandcredits">Βοήθεια και πληροφορίες για τους συγγραφείς</string>
     
     <string name="Yourproposal">Η προτασή σου</string>
@@ -161,9 +155,16 @@
     <string name="Areyousure">Σίγουρα ?</string>
     <string name="Deleted">Διαγράφηκαν</string>
     
+    <!--  About  -->    
+    <string name="WhatIsItTitle">Περιγραφή της εφαρμογής</string>
+    <string name="FeaturesTestsTitle">Δυνατότητες και προδιαγραφές</string>
+    
     <!--  About  -->
     <string name="WhatIsIt">Το ImproveMyCityMobile είναι μια εφαρμογή για κινητά τηλέφωνα που επιτρέπει στους πολίτες ενός δήμου να υποβάλλουν εύκολα και γρήγορα πάσης φύσεως αιτήματα που αφορούν στη διαβίωση τους (π.χ σπασμένα λάμπες, απουσία κάδου απορριμμάτων απο μια γειτονιά, λακκούβες στους δρόμους, σπασμένα παγκάκια επιπλέον φωτισμός σε κάποιο δρόμο, κλπ). Τα αιτήματα μεταβιβάζονται στη συνέχεια στην αρμόδια υπηρεσία του Δήμου όπου και δρομολογέιται η διευθέτηση τους. Το ImroveMyCityMobile είναι η πλέον ενδεδειγμένη λύση για τους πολίτες που θέλουν να βελτιώσουν την πόλη  τους σε συνεργασία με τις δημοτικές αρχές.\n\n
-Δημοτική αρχή:\n Η παρούσα εφαρμογή έχει παραμετροποιηθεί για τις ανάγκες του Δήμου θερμής και ειναι διασυνδεμενη με την αντίστοιχη διαδικτυακή εφαρμογή (https://smartcity.thermi.gov.gr/improve/el/)</string>
+Δημοτική αρχή:\n Η παρούσα εφαρμογή έχει παραμετροποιηθεί για τις ανάγκες του Δήμου θερμής και ειναι διασυνδεμενη με την αντίστοιχη διαδικτυακή εφαρμογή (https://smartcity.thermi.gov.gr/improve/el/)\n\n
+Τα όρια του Δήμου Θέρμης:\n Σχεδιάστηκαν βάσει των γεωδεσικών δεδομένων από το \"Δημόσια-Ανοιχτά δεδομένα\" (http://www.geodata.gov.gr/) που τα παρέχει το 
+        \"Ινστιτούτο Πληροφοριακών Συστημάτων - Eρευνητικό Κέντρο Αθηνά\" (http://www.imis.athena-innovation.gr/), και το 
+        \"Εθνικό Κέντρο Δημόσιας Διοίκησης και Αυτοδιοίκησης\" (http://www.opengov.gr)</string>
     <string name="FeaturesTests">
 - Αυτόματη εξαγωγή της γεωγραφικής θέσης του προβλήματος,\n
 - Απεικόνιση του προβλημάτος με την φωτογραφική μηχανή του κινητού τηλεφώνου,\n
@@ -183,6 +184,8 @@
 - Μέσω του google play.
     </string>
 
+  
+    <string name="ContactInfoTitle">Συγγραφείς</string>
     <string name="ContactInfo">
          CERTH-ITI Multimedia group (http://mklab.iti.gr/)\n AUTH-URENIO (http://www.urenio.org)</string>
 
@@ -206,43 +209,21 @@
     <string name="Cancel">Ακύρωση</string>
     <string name="Submit">Υποβολή</string>
     
-    <string name="Relationship">Σχέση*</string>
-    
-    <string-array name="RelOptions">
-        <item>Κάτοικος</item>
-        <item>Εργάζομαι εδώ</item>
-        <item>Επισκέπτης</item>
-    </string-array>
-				
-		
-	
-    
     <!-- Messages -->
     <string name="Welcome">Καλώς ήρθατε</string>
 	<string name="NoGPS">Παρακαλώ ενεργοποιήστε το GPS</string>
 	<string name="IncorUser">Λανθασμένο όνομα χρήστη ή κωδικός. Έχετε εγγραφεί?</string>
 	<string name="NoInternet">Δεν υπάρχει πρόσβαση στο Internet</string>
-        
-	<string name="WaitServer">Waiting for server to reply &#8230;</string>
-    <string name="NoServer">Server did not reply!</string>
-    <string name="NoCamera">Camera not available!</string>
-    <string name="YesGPS">GPS Enabled.</string>
-    <string name="ReqFix">Request location fix.</string>       
-    <string name="Pause">Pause</string>
-    <string name="GoMaps">Map directions to go there</string>
-    <string name="YesInternet">Internet accessible.</string>
-	
-    
-
-    
+    <string name="DownloadingFirst">Λήψη δεδομένων για πρώτη φορά. Παρακαλώ περιμένετε 5 δευτερόλεπτα.</string>
+    <string name="NoGPSnoWiFi">Εντοπισμός μέσω GPS ή Wi-Fi είναι κλειστός. Παρακαλώ ενεργοποιήστε τους.</string>
+    <string name="Icannotfindyourpos">Δεν μπορώ να εντοπίσω τη θέση σου.</string>    
     <string name="SyncData">Συγχρονισμός δεδομένων</string>
     <string name="Refresh">Ανανέωση</string>
     <string name="DistanceView">Αιτήματα στο νέο βεληνεκές</string>
     <string name="IssuesNoCh">Νέο πλήθος αιτημάτων</string>
-    <string name="FiltersCh">Αιτήματα βάσει νέων φίλτρων</string>
     <string name="NewIssueCh">Ανανέωση αιτημάτων για λήψη νέου αιτήματος</string>
     <string name="LocationCh">Αιτήματα στη νέα τοποθεσία</string>
-	
+	<string name="PressBackFirst">Πιέστε πρώτα το "back"</string>
 	
 	<!--  Arrays  -->
     <string-array name="Language">

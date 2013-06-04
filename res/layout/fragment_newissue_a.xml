@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llnewissue_a"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvUnauth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/GoSetup"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#111" />
+
+
+    <Spinner
+        android:id="@+id/spinnerCateg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/etTitle_ni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/STitle"
+        android:maxHeight="30dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:hint="@string/Description"
+        android:inputType="text"
+        android:lines="3"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/btAttach_image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_rect"
+            android:drawableLeft="@android:drawable/ic_menu_gallery"
+            android:onClick="onClick"
+            android:text="@string/Image"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/btProceed_ni_B"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_green"
+            android:drawableLeft="@drawable/tick"
+            android:onClick="onClick"
+            android:paddingBottom="7dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="2dp"
+            android:paddingTop="7dp"
+            android:text="@string/Proceed"
+            android:textColor="#fff" />
+    </TableRow>
+
+</LinearLayout>

@@ -18,13 +18,9 @@ import com.mk4droid.IMC_Store.Constants_API;
  * If typed password is less than 16 chars then it is padded with ' '.
  * Output is a array of bytes.         
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
- *
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  */
 public class My_Crypt_Utils {
         private IvParameterSpec ivspec;

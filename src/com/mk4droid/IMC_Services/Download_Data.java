@@ -24,13 +24,10 @@ import android.util.Log;
 
 /**
  * This class performs any download of data from remote server
- * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ *
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Download_Data {
@@ -112,13 +109,6 @@ public class Download_Data {
 	 * @return as JSON
 	 */
 	public static String Download_CategVersion(){
-
-//		Log.e("AAA", Constants_API.COM_Protocol + Constants_API.ServerSTR + Constants_API.phpExec + 
-//				"?option=com_improvemycity&task=Phptasks.TASK_GET_CATEGVERSION&format=json"
-//				);
-		 
-		
-		
 		
 		String response =  Download_Data.RestCaller(
 				Constants_API.COM_Protocol + Constants_API.ServerSTR + Constants_API.phpExec ,
@@ -154,6 +144,8 @@ public class Download_Data {
 						"y0up",   Double.toString(y0up),        		                             
 						"limit", Integer.toString(IssueNolimit)}, "UTF-8"); 
 
+			
+		
 		return response;
 	}
 

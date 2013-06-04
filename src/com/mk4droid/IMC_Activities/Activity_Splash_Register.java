@@ -12,6 +12,7 @@ import com.mk4droid.IMC_Store.Phptasks;
 import com.mk4droid.IMCity_PackDemo.R;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -38,13 +40,10 @@ import android.widget.Toast;
 
 /**
  * Shown before the start of the actual application to prompt user to register. 
- * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ *
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Activity_Splash_Register extends Activity implements OnClickListener{
@@ -52,7 +51,7 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
 	static Handler handlerRegisterButtonDisable;
 	EditText et_username, et_password;
 	String LangSTR, usernameSTR="", passwordSTR="", emailSTR = "";
-	Context ctx;
+	static Context ctx;
 	Resources resources;
 	boolean AuthFlag = false;
 	int tlv = Toast.LENGTH_LONG;
@@ -73,8 +72,9 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
 	    ImageView imvIMCLogo = (ImageView)findViewById(R.id.imvIMCLogo); 
 	    Bitmap bmIMCLogoFull = ((BitmapDrawable) resources.getDrawable(R.drawable.imc_logo) ).getBitmap();
 	    	    
-	    Bitmap bmIMCLogo = Bitmap.createBitmap(bmIMCLogoFull,  10,    5, (int)  (0.9*bmIMCLogoFull.getWidth()),  (int)   (0.72*bmIMCLogoFull.getHeight()));
-	    //imvIMCLogo.setImageDrawable(new BitmapDrawable(bmIMCLogo));
+	    Bitmap bmIMCLogo = Bitmap.createBitmap(bmIMCLogoFull,  10,    5,
+	    		 (int)  (0.9*bmIMCLogoFull.getWidth()),  (int)   (0.72*bmIMCLogoFull.getHeight()));
+	    
 	    imvIMCLogo.setImageBitmap(bmIMCLogo);
 	    //---------------------------------------
 	    
@@ -102,7 +102,7 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
 	    
 		if (AuthFlag || !InternetConnCheck.getInstance(this).isOnline(this)){
 			finish();
-			startActivity(new Intent(this,Activity_TabHost.class));
+			startActivity(new Intent(this,FActivity_TabHost.class));
 		}
 		
 		// ------ handlerSubmitButtonDisable --------
@@ -131,9 +131,17 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
 			String usernameSTR = et_username.getText().toString();
 			String passwordSTR = et_password.getText().toString();
 			
+			
+			InputMethodManager imm = (InputMethodManager)ctx.getSystemService(Service.INPUT_METHOD_SERVICE);
+			imm.hideSoftInputFromWindow(et_username.getWindowToken(), 0); 
+			imm.hideSoftInputFromWindow(et_password.getWindowToken(), 0);
+
+			
+			
 			//------------ Authenticate -----------
 		    boolean AuthFlag = Security.AuthFun(usernameSTR, passwordSTR, resources, ctx);
 		    
+	    
 		    savePreferences("AuthFlag", AuthFlag, "Boolean");
 		    
 			if (AuthFlag){
@@ -141,14 +149,14 @@ public class Activity_Splash_Register extends Activity implements OnClickListene
 	        	Toast.makeText(ctx, resources.getString(R.string.Welcome)+", "+userRealName, tlv).show();
 				
 				finish();
-				startActivity(new Intent(this,Activity_TabHost.class));
+				startActivity(new Intent(this,FActivity_TabHost.class));
 			}else 
 				Toast.makeText(ctx, resources.getString(R.string.tryagain), Toast.LENGTH_LONG).show();
 			
 			break;
 		case R.id.btSkipLogin:
 			
-			startActivity(new Intent(this,Activity_TabHost.class));
+			startActivity(new Intent(this,FActivity_TabHost.class));
 			
 			break;
 		case R.id.tvRegisterSplash:

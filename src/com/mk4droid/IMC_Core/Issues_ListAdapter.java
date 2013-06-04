@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.mk4droid.IMCity_PackDemo.R;
-import com.mk4droid.IMC_Activities.Activity_List;
+import com.mk4droid.IMC_Activities.Fragment_List;
 import com.mk4droid.IMC_Constructors.IssuePic;
 import com.mk4droid.IMC_Constructors.IssueListItem;
 import com.mk4droid.IMC_Services.Download_Data;
@@ -28,12 +28,9 @@ import android.widget.TextView;
  *   List of issues adapter.
  * 
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Issues_ListAdapter extends ArrayAdapter<IssueListItem>{
@@ -80,14 +77,14 @@ public class Issues_ListAdapter extends ArrayAdapter<IssueListItem>{
         holder.txtTitle.setText(litem._id +" "+ litem._title);   
         
         if (litem._currstate==1){
-        	holder.txtState.setText(Activity_List.resources.getString(R.string.OpenIssue));
-        	holder.txtState.setTextColor(Activity_List.resources.getColor(R.color.op));
+        	holder.txtState.setText(Fragment_List.resources.getString(R.string.OpenIssue));
+        	holder.txtState.setTextColor(Fragment_List.resources.getColor(R.color.op));
         }else if (litem._currstate==2){
-        	holder.txtState.setText(Activity_List.resources.getString(R.string.AckIssue));
-        	holder.txtState.setTextColor(Activity_List.resources.getColor(R.color.ack));
+        	holder.txtState.setText(Fragment_List.resources.getString(R.string.AckIssue));
+        	holder.txtState.setTextColor(Fragment_List.resources.getColor(R.color.ack));
         }else if (litem._currstate==3){
-        	holder.txtState.setText(Activity_List.resources.getString(R.string.ClosedIssue));
-        	holder.txtState.setTextColor(Activity_List.resources.getColor(R.color.cl));
+        	holder.txtState.setText(Fragment_List.resources.getString(R.string.ClosedIssue));
+        	holder.txtState.setTextColor(Fragment_List.resources.getColor(R.color.cl));
         }
         
         holder.txtAddress.setText(litem._address);
@@ -96,12 +93,12 @@ public class Issues_ListAdapter extends ArrayAdapter<IssueListItem>{
         String TimeStampRep = litem._reported;
         TimeStampRep        = TimeStampRep.replace("-", "/");
         
-        holder.txtReported.setText( Activity_List.resources.getString(R.string.Reported) + " "+ 
+        holder.txtReported.setText( Fragment_List.resources.getString(R.string.Reported) + " "+ 
         		My_Date_Utils.SubtractDate(TimeStampRep) + " " + 
-        		Activity_List.resources.getString(R.string.ago));
+        		Fragment_List.resources.getString(R.string.ago));
         
         // -------------------------------------------------------------
-        holder.txtVotes.setText(Activity_List.resources.getString(R.string.Votes) + " " + litem._votes);
+        holder.txtVotes.setText(Fragment_List.resources.getString(R.string.Votes) + " " + litem._votes);
         
         int IssueID = Integer.parseInt( litem._id.substring(1,litem._id.length()) );
                 
@@ -113,6 +110,10 @@ public class Issues_ListAdapter extends ArrayAdapter<IssueListItem>{
         
         if (bm != null){ 
         	holder.imgIcon.setVisibility(View.VISIBLE);
+        	
+        	if (bm.getHeight() > 100)
+        		bm = Bitmap.createScaledBitmap(bm, 100, 50, false);
+        	
         	holder.imgIcon.setImageBitmap(bm); //litem._icon);
         }    
         else 

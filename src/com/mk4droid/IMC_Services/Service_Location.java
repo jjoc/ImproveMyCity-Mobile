@@ -3,11 +3,6 @@ package com.mk4droid.IMC_Services;
 
 import java.util.Iterator;
 
-import com.google.android.maps.GeoPoint;
-import com.mk4droid.IMC_Activities.Activity_TabHost;
-import com.mk4droid.IMC_Utils.GEO;
-
-import android.app.ProgressDialog;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -22,18 +17,17 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.util.Log;
 import android.widget.Toast;
+
+import com.mk4droid.IMC_Activities.FActivity_TabHost;
+import com.mk4droid.IMCity_PackDemo.R;
 
 /**
  *  Find current location and broadcast if location has changed
- * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ *
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Service_Location extends Service {
@@ -60,24 +54,16 @@ public class Service_Location extends Service {
 	
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		// Won't run unless it's EXPLICITLY STARTED
-		//Log.d("SVTEST", "Loc service ONSTARTCOMMAND");
-		
-		
-		return 1; //super.onStartCommand(intent, flags, startId);
+		return 1; 
 	}
-	
- 
-	
+		
 	@Override
 	public IBinder onBind(Intent arg0) {
-		
 		return binder;
 	}
 	
 	@Override
 	public boolean onUnbind(Intent intent) {
-	 
 	    return false;
 	}
 	
@@ -97,8 +83,6 @@ public class Service_Location extends Service {
 	public void onCreate() {
 		super.onCreate();
 		
-		
-		
 		//-------------- LOCATION GPS and WIFI ------------------------
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
                 
@@ -108,7 +92,7 @@ public class Service_Location extends Service {
         String provider = lm.getBestProvider(crit, true);
         
         if (provider==null){
-        	Toast.makeText(Activity_TabHost.ctx, "No GPS, No Wi-Fi location. Please activate them!", tlv).show();
+        	Toast.makeText(FActivity_TabHost.ctx, getResources().getString(R.string.NoGPSnoWiFi), tlv).show();
         	
         	//startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); // Bring GPS settings
         } else{
@@ -125,23 +109,14 @@ public class Service_Location extends Service {
 //        	            + locUser.getLongitude());
         		
         	} else {
-        		Toast.makeText(Activity_TabHost.ctx, "I can not find your position!", tlv).show();
+        		Toast.makeText(FActivity_TabHost.ctx, getResources().getString(R.string.Icannotfindyourpos), tlv).show();
         	}
         }
            
      	//---------------    Location Listener WIFI ------------ 
     	locationListenerNetwork = new LocationListener() {
     		public void onLocationChanged(Location location) {
-    			
-    			
-//    			Log.e("LOC_B", " " + location.getLatitude() + " " 
-//        	            + location.getLongitude());
-
-    			
-    			
     			if (location.getAccuracy()<50){
-    				
-    				    				
     			    DecideDataUpdateDueLoc(locUser.distanceTo(location), location);
     			}
     		}
@@ -155,10 +130,6 @@ public class Service_Location extends Service {
     	locationListenerGPS = new LocationListener() {
     		@Override
     		public void onLocationChanged(Location location) {
-//    			
-//    			Log.e("LOC_C", " " + location.getLatitude() + " " 
-//        	            + location.getLongitude());
-    			
     			if (location.getAccuracy()<50)
     				DecideDataUpdateDueLoc(locUser.distanceTo(location), location);
     		}
@@ -262,9 +233,8 @@ public class Service_Location extends Service {
 		
 		//--------- Broadcast User address has changed --------------
 		if (Service_Data.HasInternet){
-			GeoPoint pt = new GeoPoint((int) (locUser.getLatitude()*1E6), (int) (locUser.getLongitude()*1E6));
-	
-	       CurrAddressSTR = GEO.ConvertGeoPointToAddress(pt,getApplicationContext()) ;
+			//GeoPoint pt = new GeoPoint((int) (locUser.getLatitude()*1E6), (int) (locUser.getLongitude()*1E6));  // RR
+	        //CurrAddressSTR = GEO.ConvertGeoPointToAddress(pt,getApplicationContext()) ;  
            sendBroadcast(new Intent("android.intent.action.MAIN").putExtra("CurrAddressSTR", CurrAddressSTR));
 		}
 		
@@ -294,18 +264,3 @@ public class Service_Location extends Service {
 		locUser.setAltitude(NewLocation.getAltitude());
 	}
 }
-
-
-
-//========== More Info ============
-//			StringBuilder sbLocation = new StringBuilder(512);
-//			sbLocation.append("Fx:"+noOfFixes);
-//			sbLocation.append("|Lg:"+ String.format("%.04f", (float) location.getLongitude()));
-//			sbLocation.append("|Lt:"+ String.format("%.04f", (float) location.getLatitude()));
-//			sbLocation.append("|Alt:"+ (int) location.getAltitude());
-//			sbLocation.append("|Acc:"+ (int) location.getAccuracy());
-//			sbLocation.append("|Spd:"+ (int) location.getSpeed());
-//
-//			SimpleDateFormat outputFormat = new SimpleDateFormat("HH:mm:ss");
-//			outputFormat.setTimeZone(TimeZone.getTimeZone("GMT+3")); 
-//			String dateSTR = outputFormat.format(location.getTime());

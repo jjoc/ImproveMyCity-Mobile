@@ -20,9 +20,10 @@
         android:layout_height    ="40dp"
         android:gravity          ="left|center_vertical"
         android:layout_weight    ="1"
-        android:textColor="#111"
+        android:textColor        ="#111"
         android:checkMark        ="@android:drawable/checkbox_off_background"
         android:checked          ="false"
+        android:paddingRight     ="10dp"
         android:text             ="CheckBox" />
 
 </LinearLayout>

@@ -2,7 +2,7 @@
 
 package com.mk4droid.IMC_Core;
 
-import com.mk4droid.IMC_Activities.Activity_TabHost;
+import com.mk4droid.IMC_Activities.FActivity_TabHost;
 import com.mk4droid.IMC_Services.InternetConnCheck;
 import com.mk4droid.IMC_Store.Constants_API;
 import com.mk4droid.IMCity_PackDemo.R;
@@ -27,12 +27,9 @@ import android.widget.TextView;
 /**
  * Implement a horizontal SeekBar for Setup->Setting range 
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Preference_SeekBar extends Preference implements OnSeekBarChangeListener {
@@ -51,7 +48,7 @@ public class Preference_SeekBar extends Preference implements OnSeekBarChangeLis
     Context ctx;
     private TextView mStatusText;
 
-    SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_TabHost.ctx);
+    SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(FActivity_TabHost.ctx);
     int distanceData            = Integer.parseInt(  mshPrefs.getString("distanceData", "5000") );
     
     
@@ -71,7 +68,7 @@ public class Preference_SeekBar extends Preference implements OnSeekBarChangeLis
         mSeekBar = new SeekBar(context, attrs);
         mSeekBar.setMax(mMaxValue - mMinValue);
         mSeekBar.setOnSeekBarChangeListener(this);
-        mSeekBar.setThumb(Activity_TabHost.resources.getDrawable(R.drawable.slidingbutton));
+        mSeekBar.setThumb(FActivity_TabHost.resources.getDrawable(R.drawable.slidingbutton));
         
         if (InternetConnCheck.getInstance(ctx).isOnline(ctx)){
         	mSeekBar.setEnabled(true);
@@ -272,7 +269,7 @@ public class Preference_SeekBar extends Preference implements OnSeekBarChangeLis
      * @param type      either "String" or "Boolean" 
      */
 	private void SavePreferences(String key, Object value, String type){
-		SharedPreferences shPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_TabHost.ctx);
+		SharedPreferences shPrefs = PreferenceManager.getDefaultSharedPreferences(FActivity_TabHost.ctx);
 		SharedPreferences.Editor editor = shPrefs.edit();
 
 		if (type.equals("String")) 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.mk4droid.IMCity_PackDemo"
-      android:versionCode="29"
-      android:versionName="1.84" android:installLocation="auto">
+      android:versionCode="33"
+      android:versionName="2.03" android:installLocation="auto">
     <uses-sdk android:minSdkVersion="8"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -11,17 +11,28 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    
+    <permission android:name="com.mk4droid.IMCity_PackDemo.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.mk4droid.IMCity_PackDemo.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    
     <uses-feature    android:name="android.hardware.camera"></uses-feature> 
+    
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
     
     <application android:label="@string/app_name" 
                   android:icon="@drawable/imc_logo"
                   android:theme="@android:style/Theme.NoTitleBar">
+        
         <service android:enabled="true" android:name="com.mk4droid.IMC_Services.Service_Data" 
             android:exported="false"     />
         <service android:enabled="true" android:name="com.mk4droid.IMC_Services.Service_Location" 
             android:exported="false"/>
-                      
-        <uses-library android:name="com.google.android.maps" android:required="true"/>
+             
+        
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+                   android:value="XXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+              
         
         <activity android:name="com.mk4droid.IMC_Activities.Activity_Splash_Register"
                   android:label="@string/app_name" android:configChanges="orientation">
@@ -32,30 +43,8 @@
         </activity>
         
         
-        <activity android:name="com.mk4droid.IMC_Activities.Group_Main" android:configChanges="orientation"/>
-        <activity android:name="com.mk4droid.IMC_Activities.Group_Report"/>
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Main"/>
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Report"/>
-        
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Setup"/>
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Filters"/>
-        
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_NewIssueA" android:windowSoftInputMode="adjustPan"/>
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_NewIssueB" />
-        
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_AR" android:screenOrientation="landscape"/>
-        
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Entity_Details" android:screenOrientation="portrait"/>
-        
-        
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Register"></activity>
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Issue_Details"></activity>
-        <activity android:name="com.mk4droid.IMC_Activities.Activity_Information_Detailed"></activity>
-		<activity android:name="com.mk4droid.IMC_Activities.Group_NewIssue"></activity>
-		<activity android:name="com.mk4droid.IMC_Activities.Group_ListOfIssues"></activity>
-		<activity android:name="com.mk4droid.IMC_Activities.Activity_List"></activity>
-		<activity android:name="com.mk4droid.IMC_Activities.Activity_SoloMap"></activity>
-		<activity android:name="com.mk4droid.IMC_Activities.Activity_TabHost"></activity>
-        
+		<activity android:name="com.mk4droid.IMC_Activities.FActivity_TabHost" ></activity>
+        <activity android:name="com.mk4droid.IMC_Activities.Activity_Setup" />
+        <activity android:name="com.mk4droid.IMC_Activities.Activity_Information_Detailed" />
     </application>
 </manifest>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svIssueDetails"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llissue_details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_soft"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/imvArrowGreen"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:paddingTop="2dp"
+                android:src="@drawable/arrow_open" />
+
+            <TextView
+                android:id="@+id/textViewOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/OpenIssue"
+                android:textColor="#216f0c" />
+
+            <ImageView
+                android:id="@+id/ImageViewArrAck"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:src="@drawable/arrow_gray" />
+
+            <TextView
+                android:id="@+id/TextViewAcknowledged"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/AckIssue" />
+
+            <ImageView
+                android:id="@+id/ImageViewArrClosed"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="2dp"
+                android:src="@drawable/arrow_gray" />
+
+            <TextView
+                android:id="@+id/TextViewClosed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/ClosedIssue" />
+        </TableRow>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:src="@drawable/line_dashed" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/Category"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff1701" />
+
+            <TextView
+                android:id="@+id/textViewCategContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Category Content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/Address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff1701" />
+
+            <TextView
+                android:id="@+id/textViewAddressContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text="Address Content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/Reportedby"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff1701" />
+
+            <TextView
+                android:id="@+id/textViewReportedbyContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text="Reported by Content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/Viewed"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff1701" />
+
+            <TextView
+                android:id="@+id/textViewViewedContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text="Viewed Content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/Status"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff1701" />
+
+            <TextView
+                android:id="@+id/textViewStatusContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/OpenIssue"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#409540" />
+        </TableRow>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/line_dashed" />
+
+        <TextView
+            android:id="@+id/tvDescrTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/Description"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Description Content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/imvIssue_Full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" />
+
+            <ZoomButton
+                android:id="@+id/btzIssue"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_zoom" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btMapSolo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/map"
+            android:drawablePadding="5dp"
+            android:enabled="true"
+            android:text="@string/Map"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:id="@+id/tlComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_round_rect_pink"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/tvNotifyRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/OnlyRegistered"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#935548" />
+
+            <Button
+                android:id="@+id/btNotifyRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/PressLogin"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#935548"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btAddComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:drawableLeft="@drawable/ic_menu_edit36"
+                android:text="@string/AddComment"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_round_rect_green"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/textViewVotesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/VotesFix"
+                    android:textColor="#6e8a57" />
+
+                <TextView
+                    android:id="@+id/textViewVotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="50dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#6e8a57"
+                    android:textStyle="bold" />
+            </TableLayout>
+
+            <Button
+                android:id="@+id/buttonVote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@android:drawable/ic_input_add"
+                android:enabled="false"
+                android:text="@string/VoteToFix"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:id="@+id/llprefs"
-    >
-       
-        <TextView
-            android:id="@+id/tvSetupTitle"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gradient_blue"
-            android:text="@string/Setup"
-            android:gravity="center"
-            android:textColor="@color/wh"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-             />
+    android:id="@+id/llprefs">
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+         >
+        
+        <Button
+        android:id="@+id/btReturn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        
+        android:text="@string/Return"
+        android:drawableLeft="@drawable/tick" />
+        
+    </TableRow>
+
     
-    <ListView
+
+    <ListView 
         android:id="@+id/android:list"
         android:tag="lvprefs"
         android:layout_width="match_parent"
         android:layout_height="0.0dp"
         android:layout_weight="1"
-         >
-    </ListView>
-        
+         />
+    
 </LinearLayout>
+    
+
+ 
+

@@ -35,11 +35,13 @@
                 android:title="@string/System"
                 android:layout="@layout/pref_categories_layout">
         
+
         <com.mk4droid.IMC_Core.Preference_SeekBar
 			android:key="distance_seekBar"
 			android:title="@string/ViewRange"
 			android:summary="@string/ViewRadius"
 			android:enabled = "false"/>
+
             
         <ListPreference android:title="@string/Refrinter" 
                         android:summary="@string/Restartneed" 

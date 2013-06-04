@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flmapnewissue"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <fragment
+        android:id="@+id/gmap_newissue"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <SlidingDrawer
+                android:id="@+id/slidingDrawer_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                android:content="@+id/content_Address"
+                android:handle="@+id/handle_Address"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/handle_Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_convex_right_andr4"
+                    android:drawableTop="@drawable/arrow_right"
+                    android:paddingTop="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/content_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="#99888888" >
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:lines="2"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+            </SlidingDrawer>
+        </TableRow>
+
+        <Button
+            android:id="@+id/btReport_new_issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/gradient_green"
+            android:drawableLeft="@drawable/tick"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+            android:text="@string/ReportIss"
+            android:textColor="#fff" />
+    </fragment>
+>
+
+</FrameLayout>

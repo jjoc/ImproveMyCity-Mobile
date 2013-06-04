@@ -20,25 +20,22 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.maps.GeoPoint;
+
 import com.mk4droid.IMCity_PackDemo.R;
-import com.mk4droid.IMC_Activities.Activity_Main;
-import com.mk4droid.IMC_Activities.Activity_TabHost;
+
+import com.mk4droid.IMC_Activities.FActivity_TabHost;
 import com.mk4droid.IMC_Constructors.Category;
 import com.mk4droid.IMC_Constructors.Issue;
 import com.mk4droid.IMC_Constructors.VersionDB;
 import com.mk4droid.IMC_Store.Constants_API;
-import com.mk4droid.IMC_Utils.GEO;
+
 
 /**
  * It is a controller to decide when to update local database.
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Service_Data extends Service {
@@ -240,7 +237,7 @@ public class Service_Data extends Service {
 								//---- dialog show ------
 								Message msg1 = new Message();
 								msg1.arg1 = 1;
-								Activity_Main.handlerDialogsPeriodicSync.sendMessage(msg1);
+								//Activity_Main.CentralMap.handlerDialogsPeriodicSync.sendMessage(msg1);
 								//---------------------
 
 								try{
@@ -252,14 +249,14 @@ public class Service_Data extends Service {
 								} catch (Exception e){
 									Message msg2 = new Message();
 									msg2.arg1 = 0;
-									Activity_Main.handlerDialogsPeriodicSync.sendMessage(msg2);
+									//Activity_Main.CentralMap.handlerDialogsPeriodicSync.sendMessage(msg2);
 									StartedUPD = false;
 								}
 
 								//---- dialog dismiss ------
 								Message msg2 = new Message();
 								msg2.arg1 = 0;
-								Activity_Main.handlerDialogsPeriodicSync.sendMessage(msg2);
+								//Activity_Main.CentralMap.handlerDialogsPeriodicSync.sendMessage(msg2);
 							}}
 						} catch (NullPointerException e){
 							Log.e(Constants_API.TAG, "Service_Data:Failed to periodically syncronize because app was closed"
@@ -271,7 +268,7 @@ public class Service_Data extends Service {
 					}
 
 					try{
-						Thread.sleep(Activity_TabHost.RefrateAR * 60 * 1000); 
+						Thread.sleep(FActivity_TabHost.RefrateAR * 60 * 1000); 
 					} catch (InterruptedException e) {
 						//Log.e(Constants_API.TAG, "Service_Data:Thread was unable to sleep:" + e.getMessage() );
 						stopThread = true;
@@ -305,35 +302,24 @@ public class Service_Data extends Service {
 			//--------- Check to update categories in sqlitedb -------
 		    VersionDB versionCategDB_Down = Download_Data.DownloadCategTimeStamp();
 		    
-		    //Log.e("versionCategDB_Down._id", ""+ versionCategDB_Down._id);
-		    
 		    int kbCateg=0;
 		    if (!versionCategDB_Down._time.equals(versionCategDB_Past._time) || 
 		    		                                   versionCategDB_Down._id==0){
-		        //Log.e("CATEG","A");
 			    kbCateg = dbHandler.addUpdCateg();
 			    dbHandler.AddUpdCategVersion(versionCategDB_Down);
 			    
 			    versionCategDB_Past = versionCategDB_Down;
 		    }
-			
-
-//		    Log.e("SD"," " + Activity_Main.mService_Location.locUser.getLongitude() + " " + 
-//					Activity_Main.mService_Location.locUser.getLatitude());
 		    
 		    //---------Update Issues ---------------------------------
-			int kbIssues = dbHandler.addUpdIssues(Activity_Main.mService_Location.locUser.getLongitude(), 
-					Activity_Main.mService_Location.locUser.getLatitude(),
+			int kbIssues = dbHandler.addUpdIssues(Service_Location.locUser.getLongitude(), 
+					                              Service_Location.locUser.getLatitude(),
 					                distanceData, IssuesNoAR);
 			
 			int kbVotes = dbHandler.AddUpdUserVotes(UserNameSTR, PasswordSTR);
-
-			
 			
 			mCategL =  dbHandler.getAllCategories();
 			mIssueL =  dbHandler.getAllIssues();
-			
-			
 			
 			if (mIssueL.size()>0)
 				dbHandler.AddUpdVersion(NewVersionDB);
@@ -342,37 +328,13 @@ public class Service_Data extends Service {
 			dbHandler.db.close();
 			StartedUPD = false;
 			
-			
-			
 			int KB_down = kbIssues + kbVotes + kbCateg;
-			
-			//-------- Say to the user for which place the device downloads data ( IP is not always right) --
-			GeoPoint pt = new GeoPoint((int) (Activity_Main.mService_Location.locUser.getLatitude()*1E6), 
-									   (int) (Activity_Main.mService_Location.locUser.getLongitude()*1E6));
-			
-			
-			String CurrAddressSTR = "";
-			CurrAddressSTR = GEO.ConvertGeoPointToAddress(pt,getApplicationContext()) ;
-			
-		    if (CurrAddressSTR!="")
-		    	CurrAddressSTR = " at " + CurrAddressSTR;
-		    else {
-			   //String.format("%.2",
-		    	CurrAddressSTR = " at \n latitude:"  + Activity_Main.mService_Location.locUser.getLatitude() 
-		    			           +",\n longitude:" + Activity_Main.mService_Location.locUser.getLongitude();
-		    }
-				
-		    	
 		    
 			//-----  Broadcast Data has changed ---------------
 			sendBroadcast(new Intent("android.intent.action.MAIN").putExtra("DataChanged", "ok"));
 			
-			Toast.makeText(getApplicationContext(), resources.getString(R.string.Downloaded) + ": " +
-                    Integer.toString( KB_down/1000 ) + " kB " + 
-                    CurrAddressSTR, Toast.LENGTH_LONG).show();
-			
-//			Log.e("LOC_DATA", " " + Service_Location.locUser.getLatitude() + " " 
-//    	            + Service_Location.locUser.getLongitude());
+			Toast.makeText(getBaseContext(), resources.getString(R.string.Downloaded) + ": " +
+                                                         Integer.toString( KB_down/1000 ) + " kB ", Toast.LENGTH_LONG).show();
 			
 		} catch (Exception e){
 			Log.e(Constants_API.TAG,"Service_DATA: DBRefreshActions: Unable to perform all actions");
@@ -380,7 +342,6 @@ public class Service_Data extends Service {
 			
 			//-----  Broadcast Data has changed to close all dialogues ---------------
 			sendBroadcast(new Intent("android.intent.action.MAIN").putExtra("DataChanged", "ok"));
-			
 		}
 		
 	}

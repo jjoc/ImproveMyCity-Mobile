@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+    <color name="MainThemeColor">#790102</color>
+    
     <color name="Backg">#FFFFFF</color>
     <color name="wh">#FFFFFFFF</color>
+    
     
     <color name="cl">#FF1F95AF</color>
     <color name="ack">#FFF2B21C</color>

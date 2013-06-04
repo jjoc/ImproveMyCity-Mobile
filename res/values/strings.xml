@@ -6,7 +6,6 @@
     <string name="CERTH">CERTH, iti.gr</string>
     <string name="google_map_api_key" translatable="false">000000000000000000000000</string>
     
-    
     <!--          Splash Register  -->
     <string name="welcometo">Demo - Smart City Services</string>
     <string name="Login">Login</string>
@@ -81,8 +80,6 @@
 	<string name="Proceed">Proceed</string>
 	<string name="ReportIss">Report issue</string>
 	<string name="IssueReported">Issue reported</string>
-	<string name="SetManually">S\n e\n t\n \n m\n a\n n\n u\n a\n l\n l\n y</string>
-	<string name="DragMarker">Drag me</string>
 	<string name="LongerTitle">Longer title is needed</string>
 	<string name="PleaseAddress">Please write address manually</string>
 	
@@ -111,6 +108,7 @@
 		
     
     <!-- Setup -->
+    <string name="Return">Return</string>
     <string name="CustAccount">User account</string>
     <string name="Username">Username</string>
     <string name="Password">Password</string>
@@ -163,7 +161,11 @@
     <string name="ContactInfoTitle">Authors</string>
 
     <string name="WhatIsIt">ImproveMyCityMobile is an application for mobiles phones that allows citizens to report all types of issues related to their neighborhood (e.g. broken labs, abandoned cars, absence of trashbins, etc). The reported issues are immediately transferred to the appropriate municipality department in order to get fixed. ImproveMyCityMobile is the best solution for the citizens to improve their city in collaboration with their administration.\n\n
-        Municipality:\nThis mobile app has been customized for the needs of the municipality of Thermi-Thessaloniki and is fully interconnected with the corresponding web-based application (https://smartcity.thermi.gov.gr/improve/en/).</string>
+        Municipality:\nThis mobile app has been customized for the needs of the municipality of Thermi-Thessaloniki and is fully interconnected with the corresponding web-based application (https://smartcity.thermi.gov.gr/improve/en/).\n\n
+        Municipality borders:\n Constructed using the geodesic data from the site 
+        \"Public-Open data\" (http://www.geodata.gov.gr/) provided by the 
+        \"Institute for the Management of Information Systems Research Center - Athena\" (http://www.imis.athena-innovation.gr/) and the 
+        \"National Centre for Public Administration and Local Government\" (http://www.opengov.gr)</string>
     
     <string name="FeaturesTests">
 - Automatic extraction of the GPS coordinates of the reported issue;\n
@@ -205,44 +207,25 @@ Report your opinion:\n
     <string name="MoreThan6Chars">More than 6 characters</string>
     <string name="Cancel">Cancel</string>
     <string name="Submit">Submit</string>
-    
-    <string name="Relationship">Relationship*</string>
-    
-    <string-array name="RelOptions">
-        <item>Resident</item>
-        <item>Working here</item>
-        <item>Visitor</item>
-    </string-array>
-    
-    
- 
-		
 
 	<!-- Messages -->
 	<string name="Welcome">Welcome</string>
 	<string name="NoInternet">No Internet</string>
 	<string name="NoGPS">Please activate GPS.</string>
 	<string name="IncorUser">Username or password are incorrect. Registered?</string>
-	<string name="WaitServer">Waiting for server to reply &#8230;</string>
-    <string name="NoServer">Server did not reply!</string>
-    <string name="NoCamera">Camera not available!</string>
-    <string name="YesGPS">GPS Enabled.</string>
-    <string name="ReqFix">Request location fix.</string>       
-    <string name="Pause">Pause</string>
-    <string name="GoMaps">Map directions to go there</string>
-    <string name="YesInternet">Internet accessible.</string>
-
-    
+	<string name="DownloadingFirst">Downloading for the first time, please wait 5 seconds.</string>
+	<string name="NoGPSnoWiFi">No GPS, No Wi-Fi location. Please activate them!</string>
+	<string name="Icannotfindyourpos">I can not find your position!</string>
+	
     <string name="SyncData">Synchronizing Data</string>
     <string name="Refresh">Refresh</string>
     <string name="DistanceView">Issues inside new range</string>
     <string name="IssuesNoCh">Latest issues list</string>
-    <string name="FiltersCh">Filtered issues</string>
+    
     <string name="NewIssueCh">Refreshing data to get the new issue</string>
     <string name="LocationCh">Issues around your new location</string>
     
-    
-    
+    <string name="PressBackFirst">Press back first</string>
     
     
     <!-- Arrays -->

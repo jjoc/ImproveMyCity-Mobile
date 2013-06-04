@@ -4,7 +4,6 @@ package com.mk4droid.IMC_Core;
 
 
 import com.mk4droid.IMC_Activities.Activity_Setup;
-import com.mk4droid.IMC_Activities.Activity_TabHost;
 import com.mk4droid.IMC_Services.InternetConnCheck;
 import com.mk4droid.IMC_Services.Security;
 import com.mk4droid.IMC_Services.Upload_Data;
@@ -32,19 +31,16 @@ import android.widget.TextView;
 /**
  * Custom preference item in setup menu for management of IMC account (remind, login, logout) 
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Preference_AccountOperations extends Preference {
     
     int tlv = Toast.LENGTH_LONG;
     Context ctx;
-    SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_TabHost.ctx);
+    SharedPreferences mshPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_Setup.ctx);
     
     public Preference_AccountOperations(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -54,9 +50,6 @@ public class Preference_AccountOperations extends Preference {
     public Preference_AccountOperations(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
- 
-    
-    
     
    /**
     *  Start a menu with 3 options login, reset, logout
@@ -64,8 +57,8 @@ public class Preference_AccountOperations extends Preference {
    @Override
    protected void onClick() {
 
-	    AlertDialog.Builder builder = new AlertDialog.Builder(Activity_TabHost.ctx);
-	    builder.setTitle(Activity_TabHost.resources.getString(R.string.AccountOperations));
+	    AlertDialog.Builder builder = new AlertDialog.Builder(Activity_Setup.ctx);
+	    builder.setTitle(Activity_Setup.resources.getString(R.string.AccountOperations));
 	    builder.setIcon( android.R.drawable.ic_menu_preferences);
 	    
 	    
@@ -74,9 +67,9 @@ public class Preference_AccountOperations extends Preference {
 
             	switch(which){
             	case 0: //------------------ LOGIN
-            		final Dialog dlg0 = new Dialog(Activity_TabHost.ctx,R.style.dialog_register);
+            		final Dialog dlg0 = new Dialog(Activity_Setup.ctx,R.style.dialog_register);
         			dlg0.setContentView(R.layout.dialog_login);
-        			dlg0.setTitle(Activity_TabHost.resources.getString(R.string.Login));
+        			dlg0.setTitle(Activity_Setup.resources.getString(R.string.Login));
             		
         			Button btSetupLogin= (Button) dlg0.findViewById(R.id.btSetupLogin);
         			
@@ -106,7 +99,7 @@ public class Preference_AccountOperations extends Preference {
         						}
         						savePreferences("AuthFlag", AuthFlag, "Boolean");
         					} else {
-        						Toast.makeText(ctx, "No internet", tlv).show();
+        						Toast.makeText(ctx, ctx.getResources().getString(R.string.NoInternet), tlv).show();
         					}
         				}});
         			
@@ -115,9 +108,9 @@ public class Preference_AccountOperations extends Preference {
             		break;
             	case 1: //----------------- REGISTER
             		
-                	final Dialog dlg = new Dialog(Activity_TabHost.ctx,R.style.dialog_register);
+                	final Dialog dlg = new Dialog(Activity_Setup.ctx,R.style.dialog_register);
         			dlg.setContentView(R.layout.dialog_register);
-        			dlg.setTitle(Activity_TabHost.resources.getString(R.string.Createanaccount));
+        			dlg.setTitle(Activity_Setup.resources.getString(R.string.Createanaccount));
         			
         			Button bt_tf_regORcreate = (Button) dlg.findViewById(R.id.bt_imc_register);
         			
@@ -160,13 +153,13 @@ public class Preference_AccountOperations extends Preference {
         							}
         						});
         					} else if (imc_username.length()==0){
-        						Toast.makeText(ctx, Activity_TabHost.resources.getString(R.string.Giveausername), tlv).show();
+        						Toast.makeText(ctx, Activity_Setup.resources.getString(R.string.Giveausername), tlv).show();
         						
         					} else if (imc_name.length()==0){
-        						Toast.makeText(ctx, Activity_TabHost.resources.getString(R.string.Givealsoyourname), tlv).show();
+        						Toast.makeText(ctx, Activity_Setup.resources.getString(R.string.Givealsoyourname), tlv).show();
         						
         					} else if (!imc_email.contains("@")){
-        						Toast.makeText(ctx, Activity_TabHost.resources.getString(R.string.NotValidEmail), tlv).show();
+        						Toast.makeText(ctx, Activity_Setup.resources.getString(R.string.NotValidEmail), tlv).show();
         					}
         					
         				}});
@@ -182,7 +175,7 @@ public class Preference_AccountOperations extends Preference {
      				    		   				Constants_API.phpExec   +
      				    		   				Phptasks.TASK_RESET_PASS));
      			
-     			    Activity_TabHost.ctx.startActivity(browserIntent2);
+                	Activity_Setup.ctx.startActivity(browserIntent2);
 
             		
             		break;
@@ -192,7 +185,7 @@ public class Preference_AccountOperations extends Preference {
         			savePreferences("PasswordAR", "", "String" );
             		savePreferences("UserNameAR", "", "String" );
         			
-            		Toast.makeText(ctx, Activity_TabHost.resources.getString(R.string.LoggedOut), Toast.LENGTH_LONG).show();
+            		Toast.makeText(ctx, Activity_Setup.resources.getString(R.string.LoggedOut), Toast.LENGTH_LONG).show();
             		
             		break;
             	}
@@ -217,7 +210,7 @@ public class Preference_AccountOperations extends Preference {
     * @param type      either "String" or "Boolean" 
     */
 	private void savePreferences(String key, Object value, String type){
-		SharedPreferences shPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_TabHost.ctx);
+		SharedPreferences shPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_Setup.ctx);
 		SharedPreferences.Editor editor = shPrefs.edit();
 
 		if (type.equals("String")) 

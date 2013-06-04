@@ -2,18 +2,14 @@
 
 package com.mk4droid.IMC_Constructors;
 
-
 import android.graphics.Bitmap;
 
 /**
  * Construct an object containing information to display in the list of issues  
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+* @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+* @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+* @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class IssueListItem {

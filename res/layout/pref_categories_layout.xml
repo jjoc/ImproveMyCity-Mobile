@@ -4,6 +4,6 @@
     android:id="@+android:id/title"
     android:textAppearance="?android:attr/textAppearanceSmall"
     android:text="Test my day"
-    android:background="@drawable/gradient_blue"
+    android:background="@color/MainThemeColor"
     android:textColor="#fff"
 />

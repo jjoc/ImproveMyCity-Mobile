@@ -5,6 +5,7 @@ package com.mk4droid.IMC_Activities;
 import java.util.Locale;
 
 import com.flurry.android.FlurryAgent;
+import com.google.android.gms.internal.bt;
 import com.mk4droid.IMCity_PackDemo.R;
 import com.mk4droid.IMC_Services.InternetConnCheck;
 import com.mk4droid.IMC_Store.Constants_API;
@@ -21,18 +22,18 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 /**
  * This is the activity where settings can be modified. Contact information is also included. 
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Activity_Setup extends PreferenceActivity {
@@ -40,7 +41,7 @@ public class Activity_Setup extends PreferenceActivity {
 	int tlv = Toast.LENGTH_LONG;
 	
     public static Resources resources;     //  for Language
-    Context ctx;
+    public static Context ctx;
     
     //preferenceUN, preferencePass
     
@@ -49,7 +50,7 @@ public class Activity_Setup extends PreferenceActivity {
     Preference CategCustomPref,CategLangPref,CategSystemPref, CategAboutPref; 
 
     SharedPreferences prefs;
-    TextView tvSetupTitle;
+    
     
     String LangSTR, PassSTR, UserNameSTR;
 
@@ -60,6 +61,8 @@ public class Activity_Setup extends PreferenceActivity {
 	String emailSTR = "";
     int UserID;
     boolean AuthFlag;
+
+	static Button btReturn;
     
     //================ onCreate ====================
     /**
@@ -69,29 +72,25 @@ public class Activity_Setup extends PreferenceActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ctx = this;
-        Activity_TabHost.IndexGroup = 3;
- 		
+        FActivity_TabHost.IndexGroup = 3;
+        FActivity_TabHost.isFStack1 = false;
+        
+        
         //-------- Set resources ------
         resources  = setResources();
 
         PreferenceManager.setDefaultValues(this, R.xml.myprefs, true);
-        
-
-        
+                
         //------ Load User Name and Pass from preferences
         setContentView(R.layout.activity_setup);
         addPreferencesFromResource(R.xml.myprefs);
         
         //----------- DATA --------------------
-        tvSetupTitle = (TextView)findViewById(R.id.tvSetupTitle);
-        
+                
         CategCustomPref= findPreference("CategCustom");
         CategLangPref  = findPreference("CategLang");
         CategSystemPref   = findPreference("CategSystem");
         CategAboutPref = findPreference("CategAbout");
-        
-//        preferenceUN   = findPreference("UserNameAR");  
-//        preferencePass = findPreference("PasswordAR");
         prefAccountOper= findPreference("Account_Operations_IMC");
         
         
@@ -100,10 +99,6 @@ public class Activity_Setup extends PreferenceActivity {
     	prefIssuesNo     = findPreference("IssuesNoAR");
     	prefFlurryAnal   = findPreference("AnalyticsSW");
     	prefDistance     = findPreference("distance_seekBar");
-    	
-    	
-//        preferenceUN.setOnPreferenceChangeListener(prefUN_change);
-//        preferencePass.setOnPreferenceChangeListener(prefPass_change);
     	prefLang.setOnPreferenceChangeListener(prefLang_change);
     	
     	prefVersion = findPreference("Version");
@@ -118,6 +113,19 @@ public class Activity_Setup extends PreferenceActivity {
 			prefVersion.setSummary(versionName +", serial code: " + Integer.toString(versionCode));
 		} catch (NameNotFoundException e) {
 		}
+    	
+    	
+    	
+    	btReturn = (Button)findViewById(R.id.btReturn);
+    	btReturn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+                    finish();
+				
+			}
+		});
+    	
         
     }
 
@@ -137,7 +145,7 @@ public class Activity_Setup extends PreferenceActivity {
     		prefIssuesNo.setEnabled(false);
     		prefRefrate.setEnabled(false);
     		prefDistance.setEnabled(false);
-    		Toast.makeText(ctx, "No internet", tlv).show();
+    		Toast.makeText(ctx, resources.getString(R.string.NoInternet), tlv).show();
     	}
 
     	//----------- Flurry Analytics --------
@@ -162,43 +170,6 @@ public class Activity_Setup extends PreferenceActivity {
     		FlurryAgent.onEndSession(this);
     }
     
-	//================ prefPass_change =======================		    
-    /**
-     *    Try to log in when changing the password. 
-     */
-//    private OnPreferenceChangeListener prefPass_change = new OnPreferenceChangeListener(){
-//
-//		@Override
-//		public boolean onPreferenceChange(Preference arg0, Object arg1) {
-//
-//			if (InternetConnCheck.getInstance(ctx).isOnline(ctx)){
-//				AuthFlag = Security.AuthFun(UserNameSTR, (String) arg1, resources, ctx);
-//
-//				if (!AuthFlag)
-//					Toast.makeText(ctx, resources.getString(R.string.IncorUser),tlv).show();
-//				else {
-//					resources = setResources(); // To get the UserRealName
-//					Toast.makeText(ctx, resources.getString(R.string.Welcome)+", "+UserRealName, tlv).show();
-//				}
-//				savePreferences("AuthFlag", AuthFlag, "Boolean");
-//			} else {
-//				Toast.makeText(ctx, "No internet", tlv).show();
-//			}
-//			return true;
-//		}};
-    
-	//================== prefUN_change =============================	
-	/**
-	 *    Get username from GUI input 
-	 */
-//	private OnPreferenceChangeListener prefUN_change = new OnPreferenceChangeListener() {
-//			public boolean onPreferenceChange(Preference preference, Object NewValue) {
-//        	UserNameSTR = NewValue.toString(); 
-//        	return true;
-//        }
-//    };  
-    
-    
     //================= prefLang_change =================================
     /**
 	 *   Get language from GUI input and change widgets accordingly 
@@ -210,29 +181,20 @@ public class Activity_Setup extends PreferenceActivity {
         	savePreferences("LanguageAR",LangSTR,"String");
         	resources   = setResources();
        
-((TextView)Activity_TabHost.mTabHost.getTabWidget().getChildAt(0)).setText(resources.getString(R.string.Main));
-((TextView)Activity_TabHost.mTabHost.getTabWidget().getChildAt(1)).setText(resources.getString(R.string.List));
-((TextView)Activity_TabHost.mTabHost.getTabWidget().getChildAt(2)).setText(resources.getString(R.string.Report));
-((TextView)Activity_TabHost.mTabHost.getTabWidget().getChildAt(3)).setText(resources.getString(R.string.Filters));
-((TextView)Activity_TabHost.mTabHost.getTabWidget().getChildAt(4)).setText(resources.getString(R.string.Setup));
+((TextView)FActivity_TabHost.mTabHost.getTabWidget().getChildAt(0)).setText(resources.getString(R.string.Main));
+((TextView)FActivity_TabHost.mTabHost.getTabWidget().getChildAt(1)).setText(resources.getString(R.string.List));
+((TextView)FActivity_TabHost.mTabHost.getTabWidget().getChildAt(2)).setText(resources.getString(R.string.Report));
+((TextView)FActivity_TabHost.mTabHost.getTabWidget().getChildAt(3)).setText(resources.getString(R.string.Filters));
+((TextView)FActivity_TabHost.mTabHost.getTabWidget().getChildAt(4)).setText(resources.getString(R.string.Setup));
 
-			tvSetupTitle.setText(resources.getString(R.string.Setup));
 
 			CategCustomPref.setTitle(resources.getString(R.string.CustAccount));
-			//CategLocPref.setTitle(resources.getString(R.string.Location));
 			CategSystemPref.setTitle(resources.getString(R.string.System));
 			CategAboutPref.setTitle(resources.getString(R.string.About));
-			
-//			preferenceUN.setTitle(resources.getString(R.string.Username));
-//			preferenceUN.setSummary(resources.getString(R.string.LatinChars));
 			
 			prefAccountOper.setTitle(resources.getString(R.string.AccountOperations));
 			prefAccountOper.setSummary(resources.getString(R.string.LoginRegisterRemindLogout));
 			
-			
-//			preferencePass.setTitle(resources.getString(R.string.Password));
-//			preferencePass.setSummary(resources.getString(R.string.LatinChars));
-						
 			prefLang.setSummary(resources.getString(R.string.LangSel));
 		    
 			prefDistance.setTitle(resources.getString(R.string.ViewRange)); 
@@ -257,6 +219,8 @@ public class Activity_Setup extends PreferenceActivity {
 			
 	    	prefReset.setTitle(resources.getString(R.string.Reset));
 	    	prefReset.setSummary(resources.getString(R.string.Deleteallissuedatastoredlocallytoyourphone));
+	    	
+	    	btReturn.setText(resources.getString(R.string.Return));
 	    	
         	return true;
         }

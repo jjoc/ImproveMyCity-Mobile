@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/flmapmain"
+    
+    >
+
+    
+    
+<fragment 
+    android:id="@+id/gmap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    class="com.google.android.gms.maps.SupportMapFragment"
+    android:tag="gmap" >
+
+    <Button
+        android:id="@+id/btMapChange"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/shape_convex_top"
+        android:tag="Normal"
+        android:text="@string/NormalMap" />
+
+    <Button
+        android:id="@+id/btRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/shape_convex_top"
+        android:gravity="bottom"
+        android:padding="5dp"
+        android:text="@string/Refresh" />
+
+</fragment>
+</FrameLayout>

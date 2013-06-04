@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llsolomap"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <fragment
+        android:id="@+id/gmap_solo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" >
+
+        <Button
+            android:id="@+id/btMapTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/shape_convex_top"
+            android:tag="Normal"
+            android:text="@string/NormalMap" />
+    </fragment>
+</LinearLayout>
+
+<!--  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llvenuesmap"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient">
+
+
+    <TextView
+            android:id="@+id/tvTitleMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/wh"
+            android:text="@string/Map"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+    </TableRow>
+        
+    <RelativeLayout
+        android:id="@+id/rlsolomap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+        
+        <com.mk4droid.IMC_Core.MapView_TapZoom
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:apiKey="@string/google_map_api_key"
+            android:clickable="true" />
+             
+        <Button
+         android:id="@+id/btMapTypes"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="60dp"
+         android:background="@drawable/shape_convex_top"
+         android:tag ="Normal"
+         android:text="@string/NormalMap" 
+         />
+    
+    
+    </RelativeLayout>
+</LinearLayout>
+-->

@@ -1,11 +1,11 @@
 /** My_Date_Utils */
 package com.mk4droid.IMC_Utils;
 
-import java.util.Date;
 import java.text.DateFormatSymbols;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
@@ -15,12 +15,9 @@ import android.text.format.DateUtils;
 /**
  *    Transform date or time to various formats
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+  * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 
@@ -79,6 +76,8 @@ public class My_Date_Utils {
 	 * 
 	 */
 	public static String SubtractDate(String Input_DateTime){
+		
+		//Log.e("Input_DateTime", " " + Input_DateTime);
 		
 		Date d1= new Date(Input_DateTime); 
 		Date d2= new Date();               

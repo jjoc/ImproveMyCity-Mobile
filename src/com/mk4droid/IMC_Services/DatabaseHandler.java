@@ -27,14 +27,12 @@ import android.util.Log;
 /**
  * Handles all operations for storing locally a subset of the remote MySQL of IMC to local SQLite
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
+
 public class DatabaseHandler extends SQLiteOpenHelper {
 	
 	String TAG_Class = getClass().getName();
@@ -346,17 +344,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			int c19 = iHelpI.getColumnIndex(KEY_Hits);    
 			int c20 = iHelpI.getColumnIndex(KEY_Username);
 
-			/* [{"id":"72","title":"Many trees here ","catid":"85","latitude":"40.54611000882814","longitude":"23.021562123031345",
-			 *   "description":"A tree is not a problem, but not so many","photo":null,"address":"Alexandrou Papanastasiou 6\u0391, Thermi 57001, Greece",
-			 *   "votes":"0","currentstatus":"1","reported":"2012-06-12 12:06:03","acknowledged":"0000-00-00 00:00:00",
-			 *   "closed":"0000-00-00 00:00:00","userid":"42","ordering":"9","params":"","state":"1",
-			 *   "language":"","hits":"1"},
-	    	 *  {"id":"71","title":"Many cats in my street","catid":"84","latitude":"40.54880848518844","longitude":"23.018600964278903","description":"Pet shop here","photo":null,"address":"Stratigou Makrygianni 28, Thermi 57001, Greece","votes":"0","currentstatus":"1","reported":"2012-06-12 12:05:19","acknowledged":"0000-00-00 00:00:00","closed":"0000-00-00 00:00:00","userid":"42","ordering":"8","params":"","state":"1","language":"","hits":"0"},
-	    	 *  {"id":"73","title":"Holes in the road","catid":"89","latitude":"40.546884507125796","longitude":"23.026851439208713","description":"many, many wonderful holes","photo":"images\/improvemycity\/42\/images\/thumbs\/android-hub.jpg","address":"Mandritsas 25, Thermi 57001, Greece","votes":"0","currentstatus":"1","reported":"2012-06-12 12:31:22","acknowledged":"0000-00-00 00:00:00","closed":"0000-00-00 00:00:00","userid":"42","ordering":"10","params":"","state":"1","language":"","hits":"1"},
-	    	 *  {"id":"74","title":"Highly problematic pipes","catid":"95","latitude":"40.546599166689724","longitude":"23.01471712562534","description":"Water loss","photo":null,"address":"Dimitriou Ypsilantou, Thermi 57001, Greece","votes":"0","currentstatus":"1","reported":"2012-06-14 09:55:23","acknowledged":"0000-00-00 00:00:00","closed":"0000-00-00 00:00:00","userid":"42","ordering":"11","params":"","state":"1","language":"","hits":"0"},
-	    	 *  {"id":"75","title":"Grass too high","catid":"86","latitude":"40.55210194645484","longitude":"23.012796663970676","description":"Taller than me","photo":null,"address":"Rafailou Papadaki Kyriakou, Thermi 57001, Greece","votes":"0","currentstatus":"1","reported":"2012-06-14 10:38:16","acknowledged":"0000-00-00 00:00:00","closed":"0000-00-00 00:00:00","userid":"42","ordering":"12","params":"","state":"1","language":"","hits":"0"},
-	    	 *  {"id":"76","title":"A car occupies place","catid":"82","latitude":"40.545873581247676","longitude":"23.023471855849948","description":"Take it out","photo":null,"address":"Mandritsas 11, Thermi 57001, Greece","votes":"0","currentstatus":"1","reported":"2012-06-14 10:39:32","acknowledged":"0000-00-00 00:00:00","closed":"0000-00-00 00:00:00","userid":"42","ordering":"13","params":"","state":"1","language":"","hits":"0"},{"id":"77","title":"More dogs than people here","catid":"84","latitude":"40.55114816369084","longitude":"23.02467348548862","description":"yes, it is true","photo":null,"address":"Stratigou Makrygianni 61-67, Thermi 57001, Greece","votes":"0","currentstatus":"1","reported":"2012-06-14 10:42:26","acknowledged":"0000-00-00 00:00:00","closed":"0000-00-00 00:00:00","userid":"42","ordering":"14","params":"","state":"1","language":"","hits":"0"}]
-	    	 */
 			
 			try
 			{
@@ -388,7 +375,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			        int    Hits           = jArrIssues.getJSONArray(i).getInt(18);    // "hits"
 			        
 			        String Username       = jArrIssues.getJSONArray(i).getString(23); // "name"
-			        
+			        			        
 					// Local db
 					Cursor cursorI = db.rawQuery( "SELECT ("+ KEY_IssueID +") FROM " 
 				         + TABLE_Issues + " WHERE " + KEY_IssueID + "=" + Integer.toString(IssueID), null);
@@ -718,6 +705,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     		db.close();
 		return HasVoted;
 	}
+	
+	//================= check if own issue ==========================================
+	/**
+	 * Check if user has submitted a certain issue.
+	 * 
+	 * @return
+	 */
+	public boolean checkIfOwnIssue(String IssueID, String UserID ) {
+		String selectQuery = "SELECT * FROM " + TABLE_Issues + " WHERE "+ KEY_IssueID +"=" + IssueID + " and " + KEY_UserID + "=" + UserID;
+
+		boolean res = false;
+		
+		if (!db.isOpen())
+			db = this.getWritableDatabase();
+
+		Cursor cursor = db.rawQuery(selectQuery, null);
+
+		if (cursor.moveToFirst()) 
+			res = true;
+				
+		cursor.close();
+		if (db.isOpen())
+    		db.close();
+		
+		return res;
+	}
+	
 	
 	//================= getAllCategories  ==========================================
 	/**

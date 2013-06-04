@@ -8,12 +8,9 @@ package com.mk4droid.IMC_Store;
 
  * Constants visible everywhere in the app.
  * 
- * @author Dimitrios Ververidis, Dr.
- *         Post-doctoral Researcher, 
- *         Information Technologies Institute, ITI-CERTH,
- *         Thermi, Thessaloniki, Greece      
- *         ververid@iti.gr,  
- *         http://mklab.iti.gr
+ * @copyright   Copyright (C) 2012 - 2013 Information Technology Institute ITI-CERTH. All rights reserved.
+ * @license     GNU Affero General Public License version 3 or later; see LICENSE.txt
+ * @author      Dimitrios Ververidis for the Multimedia Group (http://mklab.iti.gr). 
  *
  */
 public class Constants_API {
@@ -40,7 +37,7 @@ public class Constants_API {
 	/** Encryption key for transmitting password (16 digits). It should be the same as in your ImproveMyCity joomla component. 
 	 * The default value is 1234567890123456.
 	 * */
-	public static String EncKey =  "1234567890123456"; 
+	public static String EncKey =  "000000000000000"; 
 		
 	/**
 	 * Default menu language, options: "en - English" or  "el - ÅëëçíéêÜ"
@@ -52,12 +49,14 @@ public class Constants_API {
 	
 	
 	//====== GEOGRAPHIC  Limits ============
-	/** Geographical limits (rectangle) from where issues can be sent 
-    * Define the upper left and the lower right corners of the rectangle by setting the values of (LatMax, LatMin, LonMax, LongMin)               
-    * These values can be easily obtained by GoogleMaps by right-clicking on the desired points and selecting “What is here”.
+	/** Geographical limits (a polygon) from where issues can be sent are located at /raw/polygoncoords.txt
+    * polygon is created by Latitude,Longitude pairs. Latitude is separated with comma from Longitude. Points are separated with white space, e.g. 
+    * 23.1094,40.5789 23.1111,40.5781 23.1126,40.5774 23.1094,40.5789                 
+    *                
+    * HINT: The polygon should be closed, i.e. first point should match last point               
+    * HINT2: Latitude and Longitude can be obtained by from GoogleMaps by right-clicking on the desired points and selecting “What is here”.
     * */ 
-	                                        // {LatitudeMax ,  LatitudeMin ,  LongitudeMax ,  LongitudeMin}              
-    public static double[] AppGPSLimits =   {90,        -90,    180,     -180};
+	
 
     //============ Gather usage analytics ================
 	/** Key for Flurry analytics that monitors usage of application see www.flurry.com 
@@ -76,7 +75,8 @@ public class Constants_API {
 	
     //====== Google map api key ====================
     /**
-     * Insert your key in res/string.xml -> google_maps_api_key
+     * Insert your google maps v2 key in AndroidManifest.xml -> 
+     *     <meta-data android:name="com.google.android.maps.v2.API_KEY"  android:value="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
      * 
      * You should have two map api keys: 1) For debugging related to your android debug key 
      * 2) For release version related to your android release key. 
