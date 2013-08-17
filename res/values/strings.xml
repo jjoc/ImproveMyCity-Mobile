@@ -6,231 +6,232 @@
     <string name="CERTH">CERTH, iti.gr</string>
     
     <!--          Splash Register  -->
-    <string name="welcometo">Demo - Smart City Services</string>
-    <string name="Login">Login</string>
-    <string name="skipLogin">Enter as a Guest</string>
-    <string name="Registration">Registration</string>
-    <string name="newaccount">New account</string>
-    <string name="loginInstr">Login or Sign Up with your Username and Password</string>
-    <string name="tryagain">Wrong username or password. Try again.</string>
-    <string name="Yourfullname">Your full name</string>
-    <string name="Createanaccount">Create an account. Only your full name can be written with Greek letters.</string>
-    <string name="Giveausername">Give a username!</string>
-    <string name="Givealsoyourname">Give also your name!</string>
-    <string name="NotValidEmail">Not valid e-mail</string>
-    <string name="PasswordShorter">Password should be less than 16 characters</string>
+    <string name="welcometo">Morvedre Citizens</string>
+    <string name="Login">ACCESO</string>
+    <string name="skipLogin">Entrar como Invitado</string>
+    <string name="Registration">Registrarse</string>
+    <string name="newaccount">Nueva Cuenta</string>
+    <string name="loginInstr">Acceder o Registrar Usuario y Contraseña</string>
+    <string name="tryagain">Nombre Usuario o Contraseña Erroneos</string>
+    <string name="Yourfullname">Su Nombre completo</string>
+    <string name="Createanaccount">Crear una cuenta. No ponga acentos ni simbolos</string>
+    <string name="Giveausername">Seleccione nombre de Usuario de Acceso</string>
+    <string name="Givealsoyourname">Repita su nombre de Usuario</string>
+    <string name="NotValidEmail">E-Mail no valido</string>
+    <string name="PasswordShorter">Contraseña debe tener menos de 16 caracteres</string>
     
-    <string name="Sending">I am sending your data. Please wait.</string>
+    <string name="Sending">Enviado sus datos, espere por favor</string>
     
-    <string name="Notification">Notification</string>
-    <string name="Finish">Finish</string>
+    <string name="Notification">Notificado</string>
+    <string name="Finish">Finalizar</string>
     <string name="email">e-mail</string>
     
     
     <!--         SERVICES         -->
-    <string name="Downloading">Downloading</string>
-    <string name="Downloaded">Downloaded</string>
-    <string name="NewIssues">New issues</string>
-    <string name="NewLocation">Issues around new location</string>
-    <string name="NewDistance">Issues within new range</string>
-    <string name="NewFilters">Issues filtered</string>
+    <string name="Downloading">Descargando</string>
+    <string name="Downloaded">Descargado</string>
+    <string name="NewIssues">Nuevas Incidencias</string>
+    <string name="NewLocation">Incidencias alrededor de su posicion</string>
+    <string name="NewDistance">Incidencias sin Categoria</string>
+    <string name="NewFilters">Incidencias Filtros</string>
     
     <!-- Main -->
-    <string name="ReportAnIssue">Report an issue</string>
+    <string name="ReportAnIssue">Enviar Incidencia</string>
     <string name="NormalMap">Normal</string>
-    <string name="Satellite">Satellite</string>
-    <string name="OnProgress">On Progress</string>
-    <string name="RefreshOK">Refresh OK</string>
-    <string name="OpenIssue">Open</string>
-    <string name="AckIssue">Acknowledged</string>
-    <string name="ClosedIssue">Closed</string>
-    <string name="Votes">Votes</string>
-    <string name="Reported">Reported successfully</string>
-    <string name="days">days</string>
-    <string name="hours">hours</string>
-    <string name="minutes">minutes</string>
-    <string name="ago">ago</string>
-    <string name="Main">Main</string>
-    <string name="Report">New issue</string>
-    <string name="Filters">Filters</string>
-    <string name="Setup">Setup</string>
-    <string name="List">List</string>
+    <string name="Satellite">Satelite</string>
+    <string name="OnProgress">En Progreso</string>
+    <string name="RefreshOK">Refresco OK</string>
+    <string name="OpenIssue">Abierto</string>
+    <string name="AckIssue">Recibida Notificacion</string>
+    <string name="ClosedIssue">Cerrado</string>
+    <string name="Votes">Votos</string>
+    <string name="Reported">Reportado con Exito</string>
+    <string name="days">dias</string>
+    <string name="hours">horas</string>
+    <string name="minutes">minutos</string>
+    <string name="ago">hace</string>
+    <string name="Main">Principal</string>
+    <string name="Report">Nueva Incidencia</string>
+    <string name="Filters">Filtros</string>
+    <string name="Setup">SetUP</string>
+    <string name="List">Lista</string>
     
     <!--  3D --> 
-    <string name="View3D">View 3D</string>
+    <string name="View3D">Vista 3D</string>
     
     <!-- Filters  -->
-    <string name="State">State</string>
-    <string name="SelAll">Select/Unselect all</string>
-    <string name="Reverse">Reverse all</string>
-    <string name="Issues">Issues</string>
-    <string name="MyIssues">MyIssues</string>
+    <string name="State">Provincia</string>
+    <string name="SelAll">Seleccion/Deseleccion Total</string>
+    <string name="Reverse">Invertir Seleccion Total</string>
+    <string name="Issues">Incidencias</string>
+    <string name="MyIssues">Mis Incidencias</string>
 	
        <!-- Report new Issue -->
-	<string name="GoSetup">Only registered users can report a new issue. Please register using the Setup tab.</string>
-    <string name="ReportNew">Reporting new issue</string>
-	<string name="back">back</string>
-	<string name="STitle">Short Title</string>
-	<string name="Category">Category</string>
-	<string name="Address">Address</string>
-	<string name="Shoot">Shoot</string>
-	<string name="Attach">Attach Image</string>
-	<string name="Description">Description</string>
-	<string name="Proceed">Proceed</string>
-	<string name="ReportIss">Report issue</string>
-	<string name="IssueReported">Issue reported</string>
+	<string name="GoSetup">Solo usuarios Registrados pueden enviar Incidencias. Por favor Registrese.</string>
+    <string name="ReportNew">Reportar Nueva Incidencia</string>
+	<string name="back">Volver</string>
+	<string name="STitle">Titulo Corto</string>
+	<string name="Category">Categoria</string>
+	<string name="Address">Direccion</string>
+	<string name="Shoot">Hacer Foto</string>
+	<string name="Attach">Adjuntar Imagen</string>
+	<string name="Description">Descripcion</string>
+	<string name="Proceed">Proceso</string>
+	<string name="ReportIss">Reportar Incidencia</string>
+	<string name="IssueReported">Incidencia Reportada</string>
 	<string name="LongerTitle">Longer title is needed</string>
-	<string name="PleaseAddress">Please write address manually</string>
+	<string name="PleaseAddress">Por favor escriba manualmente direccion</string>
 	
-	<string name="Image">Image</string>
-	<string name="Attachanimage">Attach an image</string>
-	<string name="Gallery">Gallery</string>
-	<string name="Camera">Camera</string>
-	<string name="Clear">Clear</string>
-	<string name="Issueoutofmunicipalitylimits">Issue out of municipality limits</string>
+	<string name="Image">Imagen</string>
+	<string name="Attachanimage">Adjuntar Imagen</string>
+	<string name="Gallery">Galeria</string>
+	<string name="Camera">Camara</string>
+	<string name="Clear">Limpiar</string>
+	<string name="Issueoutofmunicipalitylimits">Incidencia fuera de los limites comarcales</string>
 	
 	
 	
 	<!--     View Issue -->
-	<string name="Reportedby">Reported by</string>
-	<string name="Viewed">Viewed</string>
-	<string name="Status">Status</string>
-	<string name="AddComment">Comment</string>
-	<string name="VotesFix">Votes to fix the issue</string>
-	<string name="VoteToFix">Vote to fix</string>
-	<string name="CommentCreat">Comment created</string>
-	<string name="AgoBy">ago by</string>
-	<string name="AlreadyVoted">You have already voted</string>
+	<string name="Reportedby">Reportado por</string>
+	<string name="Viewed">Visto</string>
+	<string name="Status">Estado</string>
+	<string name="AddComment">Comentarios</string>
+	<string name="VotesFix">Votos de Prioridad Ciudadana</string>
+	<string name="VoteToFix">Vote para fijar prioridad</string>
+	<string name="CommentCreat">Comentario Efectuado</string>
+	<string name="AgoBy">Efectuado por</string>
+	<string name="AlreadyVoted">Usted ya ha votado, gracias</string>
 	<string name="OnlyRegistered">Only registered users can comment.</string>
-	<string name="PressLogin">Press to login.</string>
-	<string name="Map">Map</string>
+	<string name="PressLogin">Click para entrar</string>
+	<string name="Map">Mapa</string>
 		
     
     <!-- Setup -->
-    <string name="Return">Return</string>
-    <string name="CustAccount">User account</string>
-    <string name="Username">Username</string>
-    <string name="Password">Password</string>
-    <string name="LatinChars">Latin characters</string>
-    <string name="GreekChars">Greek letters allowed</string>
-    <string name="AccountOperations">Account operations</string>
-    <string name="LoginRegisterRemindLogout">Login/Register/Remind/Logout</string>
+    <string name="Return">Volver</string>
+    <string name="CustAccount">Cuenta de Usuario</string>
+    <string name="Username">Nombre de Usuario</string>
+    <string name="Password">Contrasegna</string>
+    <string name="LatinChars">Caracteres Latinos</string>
+    <string name="GreekChars">Letras Griegas admitidas</string>
+    <string name="AccountOperations">Cuenta de Operaciones</string>
+    <string name="LoginRegisterRemindLogout">Entrar/Registrar/Recordar/Salir</string>
     
     <string-array name="AccountItems">
-        <item>Login</item>
-        <item>Register</item>
-        <item>Remind</item>
-        <item>Logout</item>
+        <item>ENTRAR</item>
+        <item>REGISTRAR</item>
+        <item>RECORDAR</item>
+        <item>SALIR</item>
     </string-array>
     
     
-    <string name="Language">Language</string>
-    <string name="LangSel">Language selection.</string>
-    <string name="IdonothaveA">I do not have an account</string>
-    <string name="Iforgot">I forgot my password</string>
-    <string name="Location">Location</string>
-    <string name="ViewRange">Viewing range</string>
-    <string name="ViewRadius">from current position.</string>
-    <string name="IssuesNo">Number of issues</string>
-    <string name="IssuesMaxNo">Max number of recent issues to download.</string>
-    <string name="RemindTitle">Send a reminder to:</string>
-    <string name="RemindHint">Write your e-mail here</string>
-    <string name="RemindButtonText">Send the password to e-mail</string>
-    <string name="System">System</string>
-    <string name="Refrinter">Refresh rate interval</string>
-    <string name="Restartneed">Restart is needed</string>
-    <string name="Contact">Contact</string>
-    <string name="Information">Information</string>
+    <string name="Language">IDIOMA</string>
+    <string name="LangSel">Selector de Idioma</string>
+    <string name="IdonothaveA">Yo no tengo una cuenta</string>
+    <string name="Iforgot">Yo he olvidado la contraseña</string>
+    <string name="Location">Localizacion</string>
+    <string name="ViewRange">Ver Rango</string>
+    <string name="ViewRadius">desde actual posicion</string>
+    <string name="IssuesNo">Numero de Incidencias</string>
+    <string name="IssuesMaxNo">Maximo numero de Incidencias para descarga</string>
+    <string name="RemindTitle">Enviar recordatorio a:</string>
+    <string name="RemindHint">Escribir su correo aqui</string>
+    <string name="RemindButtonText">Enviar contraseña al e-mail</string>
+    <string name="System">Sistema</string>
+    <string name="Refrinter">Refrescar tiempos de intervalo</string>
+    <string name="Restartneed">Reinicie si es necesario</string>
+    <string name="Contact">Contacto</string>
+    <string name="Information">Informacion</string>
     <string name="Version">Software version</string>
     <string name="Helpinformationandcredits">Help information and credits</string>    
     
-    <string name="Yourproposal">Your proposal</string>
-    <string name="Sendemailwithyourideas">Send an email with your ideas</string>
+    <string name="Yourproposal">Su Propuesta</string>
+    <string name="Sendemailwithyourideas">Envie E-Mail con sus Ideas</string>
     
-    <string name="Reset">Reset and restart</string>
-    <string name="Deleteallissuedatastoredlocallytoyourphone">Delete all issue data stored locally to your phone</string>
+    <string name="Reset">Resetear y Reiniciar</string>
+    <string name="Deleteallissuedatastoredlocallytoyourphone">Eliminar todos los datos almacenados en su telefono</string>
     
-    <string name="Areyousure">Are you sure</string>
-    <string name="Deleted">Deleted</string>
+    <string name="Areyousure">Esta usted seguro</string>
+    <string name="Deleted">Eliminado</string>
     
     
     <!--  About  -->    
-    <string name="WhatIsItTitle">Description</string>
-    <string name="FeaturesTestsTitle">Features</string>
-    <string name="ContactInfoTitle">Authors</string>
+    <string name="WhatIsItTitle">Descripcion</string>
+    <string name="FeaturesTestsTitle">Caracteristicas</string>
+    <string name="ContactInfoTitle">Autores</string>
 
-    <string name="WhatIsIt">ImproveMyCityMobile is an application for mobiles phones that allows citizens to report all types of issues related to their neighborhood (e.g. broken labs, abandoned cars, absence of trashbins, etc). The reported issues are immediately transferred to the appropriate municipality department in order to get fixed. ImproveMyCityMobile is the best solution for the citizens to improve their city in collaboration with their administration.\n\n
-        Municipality:\nThis mobile app has been customized for the needs of the municipality of Thermi-Thessaloniki and is fully interconnected with the corresponding web-based application (https://smartcity.thermi.gov.gr/improve/en/).\n\n
-        Municipality borders:\n Constructed using the geodesic data from the site 
-        \"Public-Open data\" (http://www.geodata.gov.gr/) provided by the 
-        \"Institute for the Management of Information Systems Research Center - Athena\" (http://www.imis.athena-innovation.gr/) and the 
-        \"National Centre for Public Administration and Local Government\" (http://www.opengov.gr)</string>
+    <string name="WhatIsIt">ImproveMyCityMobile es una aplicación para telefonos moviles que permite a los ciudadanos a reportar todo tipo de temas relacionados con su zona (por ejemplo, laboratorios rotos, coches abandonados, ausencia de contenedores, etc.) Los problemas reportados se transfieren inmediatamente al departamento municipal correspondiente, a fin de ser arreglados. ImproveMyCityMobile es la mejor solución para los ciudadanos para mejorar su ciudad, en colaboración con su administración. \ N \ n
+         Municipio:. \ Esta aplicación móvil ha sido adaptado a las necesidades de la comarca del Camp de Morvedre y está totalmente interconectada con la aplicación basada en la web correspondiente (http://www.citizenship.es/alerts) \ n \ n
+         Fronteras Municipio: \ n construido usando los datos geodésicos del sitio
+         \ "Datos de los sectores público y abierto \" (http://www.geodata.gov.gr/) proporcionados por la
+         \ "Instituto para la Gestión de la Información del Centro de Investigación de Sistemas - Athena \" (http://www.imis.athena-innovation.gr/) y el
+         \ "Centro Nacional de Administración Pública y Gobierno Local \" (http://www.opengov.gr)</string>
     
     <string name="FeaturesTests">
-- Automatic extraction of the GPS coordinates of the reported issue;\n
-- Photographing the issue using the phone\'s camera;\n
-- Voting and/or providing comments on issues already reported by other citizens Map-based view of the
-reported issues;\n 
-- Feedback about the progress status of the reported issues.\n\n
-        
-Technical requirements:\n
-- Android version 2.2 (API 8 Froyo) or later;\n
-- 1 MB of RAM to install and 10 ΜΒ of RAM to run;\n
-- 1GHz Processor;\n
-- Internet access;\n
-- GPS and camera (optional) \n\n
+- Extracción automática de las coordenadas GPS del problema reportado, \ n
+- Fotografiar el problema usando la camara del teléfono \ n
+- Votación y / o comentarios sobre los temas ya reportados por otros ciudadanos ver mapa basado en la
+los problemas notificados; \ n
+-. Comentarios sobre el estado de avance de los problemas reportados \ n \ n
+        
+Requisitos técnicos: \ n
+- Versión de Android 2.2 (Froyo API 8) o posterior; \ n
+- 1 MB de RAM para instalar y 10 ΜΒ de RAM para funcionar; \ n
+- Procesador de 1 GHz; \ n
+- Acceso a Internet; \ n
+- GPS y la cámara (opcional) \ n \ n
 
-Report your opinion:\n
-- by e-mail at improvemycitymobile@gmail.com
+Informe su opinión: \ n
+- Por correo electrónico a soporte@todored.info
     </string>
 
     <string name="ContactInfo">
-        CERTH-ITI Multimedia group (http://mklab.iti.gr/)\n AUTH-URENIO (http://www.urenio.org)</string>
+        TODORED Internet Services (http://www.todored.es) \n AUTH-URENIO (http://www.urenio.org)</string>
             
     
-     <string name="LogOut">Log out</string>
-     <string name="LoggedOut">Logged out</string>
-     <string name="SendMail">Send e-mail</string>
-     <string name="About">About</string>
+     <string name="LogOut">Salir</string>
+     <string name="LoggedOut">Desconectado</string>
+     <string name="SendMail">Enviar E-Mail</string>
+     <string name="About">Acerca de</string>
      
-    <string name="Usage">Application usage data</string>
-	<string name="Analytics">Share analytics</string>
-	<string name="HelpUs">Help us improve the app by sharing your usage data</string>
+    <string name="Usage">Uso de la Aplicacion</string>
+	<string name="Analytics">Compartir Analisis</string>
+	<string name="HelpUs">Ayude a la eficiencia de esta APP con el envio de sus datos</string>
 	
      
     
     <!-- Register -->
-    <string name="Register">Register</string>
-    <string name="FirstSecondName">First and Second name*</string>
-    <string name="ValidEmail">Valid e-mail address</string>
-    <string name="MoreThan6Chars">More than 6 characters</string>
-    <string name="Cancel">Cancel</string>
-    <string name="Submit">Submit</string>
+    <string name="Register">Registro</string>
+    <string name="FirstSecondName">Primer y Segundo Nombre*</string>
+    <string name="ValidEmail">E-Mail Valido</string>
+    <string name="MoreThan6Chars">Mas de 7 Caracteres</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="Submit">Enviar</string>
 
 	<!-- Messages -->
-	<string name="Welcome">Welcome</string>
-	<string name="NoInternet">No Internet</string>
-	<string name="NoGPS">Please activate GPS.</string>
-	<string name="IncorUser">Username or password are incorrect. Registered?</string>
-	<string name="DownloadingFirst">Downloading for the first time, please wait 5 seconds.</string>
-	<string name="NoGPSnoWiFi">No GPS, No Wi-Fi location. Please activate them!</string>
-	<string name="Icannotfindyourpos">I can not find your position!</string>
+	<string name="Welcome">Bienvenid@s</string>
+	<string name="NoInternet">Sin Internet</string>
+	<string name="NoGPS">Por favor active GPS</string>
+	<string name="IncorUser">Usuario o Contraseña incorrect@. Esta Registrad@?</string>
+	<string name="DownloadingFirst">Descargando por primera vez, por favor espere 5 segs.</string>
+	<string name="NoGPSnoWiFi">No GPS, No Wi-Fi Conexion. Por favor active!</string>
+	<string name="Icannotfindyourpos">No podemos determinar su posicion!</string>
 	
-    <string name="SyncData">Synchronizing Data</string>
-    <string name="Refresh">Refresh</string>
-    <string name="DistanceView">Issues inside new range</string>
-    <string name="IssuesNoCh">Latest issues list</string>
+    <string name="SyncData">Sincronizando datos</string>
+    <string name="Refresh">Refrescar</string>
+    <string name="DistanceView">Incidencia dentro de nuevo rango</string>
+    <string name="IssuesNoCh">Listado de ultimas Incidencias</string>
     
-    <string name="NewIssueCh">Refreshing data to get the new issue</string>
-    <string name="LocationCh">Issues around your new location</string>
+    <string name="NewIssueCh">Refresque datos para tomar nueva Incidencia</string>
+    <string name="LocationCh">Incidencias cerca de su localizacion</string>
     
-    <string name="PressBackFirst">Press back first</string>
+    <string name="PressBackFirst">Presione volver primero</string>
     
     
     <!-- Arrays -->
     <string-array name="Language">
         <item>el - Ελληνικά</item>
         <item>en - English</item>
+		<item>es - Spanish</item>
     </string-array>
     
     <string-array name="refrateoptions">
@@ -242,10 +243,10 @@ Report your opinion:\n
     </string-array>
     
     <string-array name="refrateoptions_entries">
-        <item>1 minute</item>
-        <item>5 minutes (recommended)</item>
-        <item>10 minutes</item>
-        <item>1 hour</item>
+        <item>1 minuto</item>
+        <item>5 minutos (recomendado)</item>
+        <item>10 minutos</item>
+        <item>1 hora</item>
         <item>off</item>
     </string-array>
     
@@ -260,10 +261,10 @@ Report your opinion:\n
     </string-array>
     
     <string-array name="maxno_issues_entries">
-        <item>20 issues</item>
-        <item>40 issues (recommended)</item>
-        <item>80 issues</item>
-        <item>100 issues</item>
-        <item>400 issues</item>
+        <item>20 incidencias</item>
+        <item>40 incidencias (recomendado)</item>
+        <item>80 incidencias</item>
+        <item>100 incidencias</item>
+        <item>400 incidencias</item>
     </string-array>
 </resources>
